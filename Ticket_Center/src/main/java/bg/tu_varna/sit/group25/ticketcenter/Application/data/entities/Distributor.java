@@ -1,100 +1,126 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
-
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name="DISTRIBUTOR")
+@Table(name="distributor")
 @Entity
-public class Distributor
-{
+public class Distributor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="DISTRIBUTOR_ID",nullable = false)
-    private int DISTRIBUTOR_ID;
+    @JoinColumn(name="Distributor_ID",nullable = false)
+    private int Distributor_ID;
 
-    @Column(name="NAME_D",nullable = false)
-    private String NAME_D;
+    @Column(name="Name_D",nullable = false)
+    private String Name_D;
 
-    @Column(name="PHONE_NUMBER_D",nullable = false)
-    private String PHONE_NUMBER_D;
+    @Column(name="Phone_Number_D",nullable = false)
+    private String Phone_Number_D;
 
-    @Column(name="FEE_D",nullable = false)
-    private double FEE_D;
+    @Column(name="Fee_D",nullable = false)
+    private double Fee_D;
 
-    @Column(name="RATING",nullable = false)
-    private double RATING;
+    @Column(name="Rating",nullable = false)
+    private double Rating;
 
-    @Column(name="USERNAME_D",nullable = false)
-    private String USERNAME_D;
+    @Column(name="Rating_Count",nullable = false)
+    private double Rating_Count;
 
-    @Column(name="PASSWOR_D",nullable = false)
-    private int PASSWOR_D;
+    @Column(name="UserName_D",nullable = false)
+    private String UserName_D;
 
+    @Column(name="Password_D",nullable = false)
+    private int Password_D;
 
+    @OneToMany(mappedBy = "Distributor_ID")
+    private Set<Show> showSet;
 
-    public int getDISTRIBUTOR_ID() {
-        return DISTRIBUTOR_ID;
+    @OneToMany(mappedBy = "Distributor_ID")
+    private Set<Form>formSet;
+
+    public int getDistributor_ID() {
+        return Distributor_ID;
     }
 
-    public void setDISTRIBUTOR_ID(int DISTRIBUTOR_ID) {
-        this.DISTRIBUTOR_ID = DISTRIBUTOR_ID;
+    public void setDistributor_ID(int distributor_ID) {
+        Distributor_ID = distributor_ID;
     }
 
-    public String getNAME_D() {
-        return NAME_D;
+    public String getName_D() {
+        return Name_D;
     }
 
-    public void setNAME_D(String NAME_D) {
-        this.NAME_D = NAME_D;
+    public void setName_D(String name_D) {
+        Name_D = name_D;
     }
 
-    public String getPHONE_NUMBER_D() {
-        return PHONE_NUMBER_D;
+    public String getPhone_Number_D() {
+        return Phone_Number_D;
     }
 
-    public void setPHONE_NUMBER_D(String PHONE_NUMBER_D) {
-        this.PHONE_NUMBER_D = PHONE_NUMBER_D;
+    public void setPhone_Number_D(String phone_Number_D) {
+        Phone_Number_D = phone_Number_D;
     }
 
-    public double getFEE_D() {
-        return FEE_D;
+    public double getFee_D() {
+        return Fee_D;
     }
 
-    public void setFEE_D(double FEE_D) {
-        this.FEE_D = FEE_D;
+    public void setFee_D(double fee_D) {
+        Fee_D = fee_D;
     }
 
-    public double getRATING() {
-        return RATING;
+    public double getRating() {
+        return Rating;
     }
 
-    public void setRATING(double RATING) {
-        this.RATING = RATING;
+    public void setRating(double rating) {
+        Rating = rating;
     }
 
-    public String getUSERNAME_D() {
-        return USERNAME_D;
+    public double getRating_Count() {
+        return Rating_Count;
     }
 
-    public void setUSERNAME_D(String USERNAME_D) {
-        this.USERNAME_D = USERNAME_D;
+    public void setRating_Count(double rating_Count) {
+        Rating_Count = rating_Count;
     }
 
-    public int getPASSWOR_D() {
-        return PASSWOR_D;
+    public String getUserName_D() {
+        return UserName_D;
     }
 
-    public void setPASSWOR_D(int PASSWOR_D) {
-        this.PASSWOR_D = PASSWOR_D;
+    public void setUserName_D(String userName_D) {
+        UserName_D = userName_D;
+    }
+
+    public int getPassword_D() {
+        return Password_D;
+    }
+
+    public void setPassword_D(int password_D) {
+        Password_D = password_D;
+    }
+
+    public Set<Show> getShowSet() {
+        return showSet;
+    }
+
+    public void setShowSet(Set<Show> showSet) {
+        this.showSet = showSet;
     }
 
     @Override
     public String toString() {
-        return "Distributor info"+"\n"+"[" +
-                " Distributor's id= " + DISTRIBUTOR_ID +"\n"+
-                "Name= " + NAME_D + '\n' +
-                "Phone number= " + PHONE_NUMBER_D + '\n' +
-                "RATING=" + RATING +"\n"+
-                "USERNAME_D='" + USERNAME_D + ']';
+        return "distributor{" +
+                "Distributor_ID=" + Distributor_ID +
+                ", Name_D='" + Name_D + '\'' +
+                ", Phone_Number_D='" + Phone_Number_D + '\'' +
+                ", Fee_D=" + Fee_D +
+                ", Rating=" + Rating +
+                ", Rating_Count=" + Rating_Count +
+                ", UserName_D='" + UserName_D + '\'' +
+                ", Password_D=" + Password_D +
+                ", showSet=" + showSet +
+                '}';
     }
 }

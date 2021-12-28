@@ -1,101 +1,76 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
+
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name="FORM")
-public class Form
-{
+@Table(name="form")
+@Entity
+public class Form {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "SOLD_TICKETS",nullable = false)
-    private int SOLD_TICKETS;
+    @Column(name= "Sold_Tickets",nullable = false)
+    private int Sold_Tickets;
 
-    @Column(name="PRICE_TICKET",nullable = false)
-    private double PRICE_TICKET;
+    @Column(name="Price_Ticket",nullable = false)
+    private double Price_Ticket;
 
-    @Column(name="TICKET_TYPE",nullable = false)
-    private String TICKET_TYPE;
+    @Column(name="Customer_ID",nullable = false)
+    private int Customer_ID;
 
-    @Column(name="CUSTOMER_ID",nullable = false)
-    private int CUSTOMER_ID;
+    @Column(name="Distributor_ID",nullable = false)
+    private int Distributor_ID;
 
-    @Column(name="PLACE_ID",nullable = false)
-    private int PLACE_ID;
+    @Column(name="Show_ID",nullable = false)
+    private int Show_ID;
 
-    @Column(name="DISTRIBUTOR_ID",nullable = false)
-    private int DISTRIBUTOR_ID;
 
-    @Column(name="SHOW_ID",nullable = false)
-    private int SHOW_ID;
-
-    @OneToMany(mappedBy = "Task")
+    @OneToMany(mappedBy = "Distributor_ID")
     private Set<Distributor>distributorSet;
 
-    @OneToMany(mappedBy = "Task")
+    @OneToMany(mappedBy = "Customer_ID")
     private Set<Customer>customerSet;
 
-    @OneToMany(mappedBy = "Task")
-    private Set<SHOW>showSet;
+    @OneToMany(mappedBy = "Show_ID")
+    private Set<Show>showSet;
 
-    @OneToMany(mappedBy = "Task")
-    private Set<LOCATION_SHOW>location_showSet;
-
-    @OneToMany(mappedBy = "Task")
-    private Set<SHOW>placeSet;
-
-    public int getSOLD_TICKETS() {
-        return SOLD_TICKETS;
+    public int getSold_Tickets() {
+        return Sold_Tickets;
     }
 
-    public void setSOLD_TICKETS(int SOLD_TICKETS) {
-        this.SOLD_TICKETS = SOLD_TICKETS;
+    public void setSold_Tickets(int sold_Tickets) {
+        Sold_Tickets = sold_Tickets;
     }
 
-    public double getPRICE_TICKET() {
-        return PRICE_TICKET;
+    public double getPrice_Ticket() {
+        return Price_Ticket;
     }
 
-    public void setPRICE_TICKET(double PRICE_TICKET) {
-        this.PRICE_TICKET = PRICE_TICKET;
+    public void setPrice_Ticket(double price_Ticket) {
+        Price_Ticket = price_Ticket;
     }
 
-    public String getTICKET_TYPE() {
-        return TICKET_TYPE;
+    public int getCustomer_ID() {
+        return Customer_ID;
     }
 
-    public void setTICKET_TYPE(String TICKET_TYPE) {
-        this.TICKET_TYPE = TICKET_TYPE;
+    public void setCustomer_ID(int customer_ID) {
+        Customer_ID = customer_ID;
     }
 
-    public int getCUSTOMER_ID() {
-        return CUSTOMER_ID;
+    public int getDistributor_ID() {
+        return Distributor_ID;
     }
 
-    public void setCUSTOMER_ID(int CUSTOMER_ID) {
-        this.CUSTOMER_ID = CUSTOMER_ID;
+    public void setDistributor_ID(int distributor_ID) {
+        Distributor_ID = distributor_ID;
     }
 
-    public int getPLACE_ID() {
-        return PLACE_ID;
+    public int getShow_ID() {
+        return Show_ID;
     }
 
-    public void setPLACE_ID(int PLACE_ID) {
-        this.PLACE_ID = PLACE_ID;
-    }
-
-    public int getDISTRIBUTOR_ID() {
-        return DISTRIBUTOR_ID;
-    }
-
-    public void setDISTRIBUTOR_ID(int DISTRIBUTOR_ID) {
-        this.DISTRIBUTOR_ID = DISTRIBUTOR_ID;
-    }
-
-    public int getSHOW_ID() {
-        return SHOW_ID;
-    }
-
-    public void setSHOW_ID(int SHOW_ID) {
-        this.SHOW_ID = SHOW_ID;
+    public void setShow_ID(int show_ID) {
+        Show_ID = show_ID;
     }
 
     public Set<Distributor> getDistributorSet() {
@@ -106,32 +81,33 @@ public class Form
         this.distributorSet = distributorSet;
     }
 
+    public Set<Customer> getCustomerSet() {
+        return customerSet;
+    }
+
     public void setCustomerSet(Set<Customer> customerSet) {
         this.customerSet = customerSet;
     }
 
-    public void setShowSet(Set<SHOW> showSet) {
+    public Set<Show> getShowSet() {
+        return showSet;
+    }
+
+    public void setShowSet(Set<Show> showSet) {
         this.showSet = showSet;
-    }
-
-    public void setLocation_showSet(Set<LOCATION_SHOW> location_showSet) {
-        this.location_showSet = location_showSet;
-    }
-
-    public void setPlaceSet(Set<SHOW> placeSet) {
-        this.placeSet = placeSet;
     }
 
     @Override
     public String toString() {
-        return "Form{" +
-                "SOLD_TICKETS=" + SOLD_TICKETS +
-                ", PRICE_TICKET=" + PRICE_TICKET +
-                ", TICKET_TYPE='" + TICKET_TYPE + '\'' +
-                ", CUSTOMER_ID=" + CUSTOMER_ID +
-                ", PLACE_ID=" + PLACE_ID +
-                ", DISTRIBUTOR_ID=" + DISTRIBUTOR_ID +
-                ", SHOW_ID=" + SHOW_ID +
+        return "form{" +
+                "Sold_Tickets=" + Sold_Tickets +
+                ", Price_Ticket=" + Price_Ticket +
+                ", Customer_ID=" + Customer_ID +
+                ", Distributor_ID=" + Distributor_ID +
+                ", Show_ID=" + Show_ID +
+                ", distributorSet=" + distributorSet +
+                ", customerSet=" + customerSet +
+                ", showSet=" + showSet +
                 '}';
     }
 }

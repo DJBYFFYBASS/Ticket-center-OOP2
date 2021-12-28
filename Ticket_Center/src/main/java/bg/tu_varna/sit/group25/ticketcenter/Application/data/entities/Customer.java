@@ -1,45 +1,67 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
-@Table(name="CUSTOMER")
-public class Customer implements Serializable
-{
-    private static final long selialversionUID=1L;
+@Table(name="customer")
+@Entity
+public class Customer {
+    private static final long serialVersionUID=1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="CUSTOMER_ID",nullable = false)
-    private int CUSTOMER_ID;
+    @JoinColumn(name="Customer_ID",nullable = false)
+    private int Customer_ID;
 
-    @Column(name="CUSTOMER_NAME",nullable = false)
-    private String CUSTOMER_NAME;
+    @Column(name="Customer_Name",nullable = false)
+    private String Customer_Name;
 
-    @Column(name="PHONE_NUMBER",nullable = false)
-    private String PHONE_NUMBER;
+    @Column(name="Phone_Number",nullable = false)
+    private String Phone_Number;
 
-    @Column(name="TICKET_LIMIT",nullable = false)
-    private int TICKET_LIMIT;
-    public int getCUSTOMER_ID() {
-        return CUSTOMER_ID;
+    @Column(name="Ticket_Limit",nullable = false)
+    private int Ticket_Limit;
+
+
+
+    public int getCustomer_ID() {
+        return Customer_ID;
     }
 
-    public int getTICKET_LIMIT() {
-        return TICKET_LIMIT;
+    public void setCustomer_ID(int customer_ID) {
+        Customer_ID = customer_ID;
     }
 
-    public void setTICKET_LIMIT(int TICKET_LIMIT) {
-        this.TICKET_LIMIT = TICKET_LIMIT;
+    public String getCustomer_Name() {
+        return Customer_Name;
+    }
+
+    public void setCustomer_Name(String customer_Name) {
+        Customer_Name = customer_Name;
+    }
+
+    public String getPhone_Number() {
+        return Phone_Number;
+    }
+
+    public void setPhone_Number(String phone_Number) {
+        Phone_Number = phone_Number;
+    }
+
+    public int getTicket_Limit() {
+        return Ticket_Limit;
+    }
+
+    public void setTicket_Limit(int ticket_Limit) {
+        Ticket_Limit = ticket_Limit;
     }
 
     @Override
     public String toString() {
-        return "Customer info [" +"\n"+
-                "Customer's id= " + CUSTOMER_ID +"\n"+
-                "Customer's name= " + CUSTOMER_NAME + "\n" +
-                "Customer's phone number= " + PHONE_NUMBER + "\n" +
-                "Customer's ticket limit= " + TICKET_LIMIT +
-                ']';
+        return "customer{" +
+                "Customer_ID=" + Customer_ID +
+                ", Customer_Name='" + Customer_Name + '\'' +
+                ", Phone_Number='" + Phone_Number + '\'' +
+                ", Ticket_Limit=" + Ticket_Limit +
+                '}';
     }
 }
