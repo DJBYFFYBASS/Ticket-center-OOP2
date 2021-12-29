@@ -36,7 +36,6 @@ public class HelloController implements EventHandler <MouseEvent> {
     @FXML
     private void initialize()
     {
-
         lobbyButton.setOnMouseClicked(this::handle);
     }
 
