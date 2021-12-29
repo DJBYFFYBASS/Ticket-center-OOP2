@@ -22,6 +22,11 @@ public class Constants
         public static final String ORGANIZER_LOGIN="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/OrganizerLogin-view.fxml";
     }
 
+    public static class Distributor
+    {
+        public static final String DISTRIBUTOR_LOGIN="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorLogin-view.fxml";
+    }
+
     public static class Values
     {
         public static final String TITTLE="Hello there user";

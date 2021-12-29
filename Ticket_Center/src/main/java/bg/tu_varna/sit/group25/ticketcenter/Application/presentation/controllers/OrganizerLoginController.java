@@ -19,4 +19,9 @@ public class OrganizerLoginController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+    public void setUserInformation(String username,String pass)
+    {
+        username=tfUserOrg.getText();
+        pass=tfPassOrg.getText();
+    }
 }

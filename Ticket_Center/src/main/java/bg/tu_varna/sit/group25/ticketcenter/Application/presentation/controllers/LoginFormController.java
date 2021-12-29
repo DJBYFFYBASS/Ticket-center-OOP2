@@ -23,15 +23,22 @@ public class LoginFormController  implements Initializable {
         OrganizerLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                LoginUtls.chooseLogin(actionEvent, "/bg/tu_varna/sit/group25/ticketcenter/presentation.views/OrganizerLogin-view.fxml","OrganizerLogin");
+                LoginUtls.chooseLogin(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
+                        "OrganizerLogin",null,null);
             }
         });
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                LoginUtls.chooseLogin(actionEvent, "/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorLogin-view.fxml","DistributorLogin");
+                LoginUtls.chooseLogin(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
+                        "DistributorLogin",null,null);
             }
         });
+
+    }
+
+    public void setUserInformation(String username,String pass)
+    {
 
     }
 
