@@ -9,12 +9,17 @@ public class Constants
 
     public static class Login
     {
-        public static final String LOGIN_VIEW="bg/tu_varna/sit/group25/ticketcenter/presentation.views/LoginForm-view.fxml";
+        public static final String LOGIN_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/LoginForm-view.fxml";
     }
 
     public static class Configurations
     {
         public static final String LOG4J_PROPERTIES="/bg/tu_varna/sit/group25/ticketcenter/configuration/log4j.properties";
+    }
+
+    public static class Organizer
+    {
+        public static final String ORGANIZER_LOGIN="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/OrganizerLogin-view.fxml";
     }
 
     public static class Values

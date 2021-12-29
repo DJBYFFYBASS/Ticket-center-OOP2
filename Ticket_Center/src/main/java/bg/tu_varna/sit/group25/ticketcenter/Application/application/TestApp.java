@@ -31,11 +31,6 @@ public class TestApp extends Application {
 
             stage.setTitle(Constants.Values.TITTLE);
             stage.setScene(scene);
-            stage.setResizable(false);
-            stage.setMaxWidth(780);
-            stage.setMaxHeight(630);
-            stage.setWidth(320);
-            stage.setHeight(240);
             stage.show();
         }
         else

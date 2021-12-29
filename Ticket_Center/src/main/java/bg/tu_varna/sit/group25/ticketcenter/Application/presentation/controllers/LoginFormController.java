@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LoginUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,26 +17,19 @@ public class LoginFormController  implements Initializable {
     private Button OrganizerLoginButton;
     @FXML
     private Button DistributorLoginButton;
-
-    private final LoginUtls loginUtls;
-
-    public LoginFormController() {
-        loginUtls = null;
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         OrganizerLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                LoginUtls.chooseLogin(actionEvent,"OrganizerLogin-view.fxml","OrganizerLogin");
+                LoginUtls.chooseLogin(actionEvent, "/bg/tu_varna/sit/group25/ticketcenter/presentation.views/OrganizerLogin-view.fxml","OrganizerLogin");
             }
         });
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-
+                LoginUtls.chooseLogin(actionEvent, "/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorLogin-view.fxml","DistributorLogin");
             }
         });
 
