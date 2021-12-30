@@ -31,6 +31,10 @@ public class Constants
     {
         public static final String TICKET_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/TicketForm-view.fxml";
     }
+    public static class RateingForm
+    {
+        public static final String RATING_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorRateing-view.fxml";
+    }
     public static class EventForm
     {
         public static final String EVENT_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/EventForm-view.fxml";
