@@ -19,7 +19,6 @@ public class LoginUtls {
             try {
                 FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
                 LoginFormController loginFormController=loader.getController();
-                loginFormController.setUserInformation(username,pass);
                 root = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -34,6 +33,39 @@ public class LoginUtls {
                 e.printStackTrace();
             }
 
+        }
+        Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage.setTitle(title);
+        stage.setScene((new Scene(root,600,400)));
+        stage.show();
+    }
+
+
+    public static void OrgLogin(ActionEvent event,String fxmlFile,String title,String username,String pass)
+    {
+        Parent root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
+            LoginFormController loginFormController = loader.getController();
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
+        stage.setTitle(title);
+        stage.setScene((new Scene(root,600,400)));
+        stage.show();
+    }
+    public static void DisLogin(ActionEvent event,String fxmlFile,String title,String username,String pass)
+    {
+        Parent root = null;
+
+        try {
+            FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
+            LoginFormController loginFormController=loader.getController();
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
         stage.setTitle(title);

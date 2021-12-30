@@ -37,10 +37,7 @@ public class LoginFormController  implements Initializable {
 
     }
 
-    public void setUserInformation(String username,String pass)
-    {
 
-    }
 
 
 }
