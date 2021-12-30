@@ -4,7 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="289.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.DistributorLoginController">
+<AnchorPane prefHeight="289.0" prefWidth="477.0"
+            xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.DistributorLoginController">
     <children>
         <Label layoutX="59.0" layoutY="90.0" text="Username">
             <font>

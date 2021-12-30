@@ -42,7 +42,7 @@ public class LoginUtls {
 
 
     public static void OrgLogin(ActionEvent event,String fxmlFile,String title,String username,String pass)
-    {
+    {//add DB distributor user and pass check
         Parent root = null;
         try {
             FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
@@ -57,7 +57,7 @@ public class LoginUtls {
         stage.show();
     }
     public static void DisLogin(ActionEvent event,String fxmlFile,String title,String username,String pass)
-    {
+    {//add DB distributor user and pass check
         Parent root = null;
 
         try {

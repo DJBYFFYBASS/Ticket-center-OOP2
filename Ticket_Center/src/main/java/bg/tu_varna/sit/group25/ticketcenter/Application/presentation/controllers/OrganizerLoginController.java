@@ -29,7 +29,7 @@ public class OrganizerLoginController implements Initializable {
             public void handle(ActionEvent event) {
                 if (tfPassOrg.getText()!=""&&tfUserOrg.getText()!="")
                 {
-                    //LoginUtls.OrgLogin(event,null,"Event Form",tfUserOrg.getText(),tfPassOrg.getText());
+                    LoginUtls.OrgLogin(event,Constants.EventForm.EVENT_FORM_VIEW,"Event Form",tfUserOrg.getText(),tfPassOrg.getText());
                 }
                 else {
                     lbOrgWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);

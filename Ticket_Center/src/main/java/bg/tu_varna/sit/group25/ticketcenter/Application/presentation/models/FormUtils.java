@@ -9,4 +9,17 @@ public class FormUtils {
 
         }
     }
+
+    public static void EventFormCreate(String Location,String Type,String Name,String Status,String Date,String Tickets,String Ticket_limit,String ID)
+    {//make DB connection and insert data
+
+    }
+    public static void EventFormUpdate(String Location,String Type,String Name,String Status,String Date,String Tickets,String Ticket_limit,String ID)
+    {//make DB connection and update data at specified ID
+
+    }
+    public static void DisRateing()
+    {
+
+    }
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.presentation.views.DistributorRateingView">
+   <children>
+      <Button fx:id="buttonSubmmitRating" layoutX="158.0" layoutY="266.0" mnemonicParsing="false" text="Submit">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></Button>
+      <TextField fx:id="tfRateing" layoutX="172.0" layoutY="188.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></TextField>
+   </children>
+</AnchorPane>
