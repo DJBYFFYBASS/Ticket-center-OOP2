@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Table(name="customer")
 @Entity
@@ -21,6 +22,8 @@ public class Customer {
     @Column(name="Ticket_Limit",nullable = false)
     private int Ticket_Limit;
 
+    @OneToMany(mappedBy = "Customer_ID")
+    private Set<Form> formSet;
 
 
     public int getCustomer_ID() {

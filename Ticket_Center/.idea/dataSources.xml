@@ -12,5 +12,12 @@ C:/Users/byffe/Documents/GitHub/Ticket-center-OOP2/Ticket_Center/src/main/resour
       <jdbc-url>jdbc:mysql://127.0.0.1:3306/TicketCenter</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="@localhost" uuid="dbaaa5f3-854b-493f-a3f0-a40c37adfc08">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
