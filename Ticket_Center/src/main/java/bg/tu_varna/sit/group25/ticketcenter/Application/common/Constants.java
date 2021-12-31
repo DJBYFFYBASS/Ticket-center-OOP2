@@ -31,15 +31,23 @@ public class Constants
     {
         public static final String TICKET_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/TicketForm-view.fxml";
     }
+
+    public static class RateingForm
+    {
+        public static final String RATING_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorRateing-view.fxml";
+    }
+
     public static class EventForm
     {
         public static final String EVENT_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/EventForm-view.fxml";
     }
+
     public static class Warning
     {
         public static final String EMPTY_FIELDS_MESSAGE="Please fill all the fields";
         public static final String INVALID_DATA_MESSAGE="Entered data is incorrect";
     }
+
     public static class Values
     {
         public static final String TITTLE="Hello there user";

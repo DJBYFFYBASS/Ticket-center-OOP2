@@ -2,6 +2,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controller
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LoginUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -35,6 +36,7 @@ public class TicketFormController implements Initializable {
             public void handle(ActionEvent event) {
                 if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != "") {
                     FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText());
+                    LoginUtls.chooseLogin(event,Constants.RateingForm.RATING_FORM_VIEW,"Rating Form",null,null);
                 } else {
                     lbWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
                 }

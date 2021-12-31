@@ -18,8 +18,8 @@ public class FormUtils {
     {//make DB connection and update data at specified ID
 
     }
-    public static void DisRateing()
-    {
+    public static void DisRateing(String Rateing)
+    {//add the rateing to
 
     }
 }
