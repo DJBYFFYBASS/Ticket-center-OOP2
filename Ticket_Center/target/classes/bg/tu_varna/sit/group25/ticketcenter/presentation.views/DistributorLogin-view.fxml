@@ -24,11 +24,11 @@
                 <Font name="Arial" size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tfPassDis" layoutX="159.0" layoutY="136.0">
+        <PasswordField fx:id="tfPassDis" layoutX="159.0" layoutY="136.0">
             <font>
                 <Font name="Arial" size="18.0" />
             </font>
-        </TextField>
+        </PasswordField>
         <Button fx:id="DistributorLoginButton" layoutX="190.0" layoutY="216.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Login">
             <font>
                 <Font size="18.0" />
