@@ -30,7 +30,7 @@ public class Distributor {
     private String UserName_D;
 
     @Column(name="Password_D",nullable = false)
-    private int Password_D;
+    private String Password_D;
 
     @OneToMany(mappedBy = "Distributor_ID")
     private Set<Show> showSet;
@@ -38,7 +38,7 @@ public class Distributor {
     @OneToMany(mappedBy = "Distributor_ID")
     private Set<Form>formSet;
 
-    public Distributor(String userName_D, int password_D) {
+    public Distributor(String userName_D, String password_D) {
         UserName_D = userName_D;
         Password_D = password_D;
     }
@@ -101,11 +101,11 @@ public class Distributor {
         UserName_D = userName_D;
     }
 
-    public int getPassword_D() {
+    public String getPassword_D() {
         return Password_D;
     }
 
-    public void setPassword_D(int password_D) {
+    public void setPassword_D(String password_D) {
         Password_D = password_D;
     }
 

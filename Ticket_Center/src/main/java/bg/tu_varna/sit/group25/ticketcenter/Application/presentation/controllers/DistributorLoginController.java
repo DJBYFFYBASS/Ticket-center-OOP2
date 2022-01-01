@@ -37,7 +37,7 @@ public class DistributorLoginController implements Initializable {
             public void handle(ActionEvent event) {
                if (tfPassDis.getText().isBlank()==false&&tfUserDis.getText().isBlank()==false)
                 {
-                    LoginUtls.DisLogin(event,Constants.TicketForm.TICKET_FORM_VIEW,"Ticket Form",tfUserDis.getText(), Integer.parseInt(tfPassDis.getText()));
+                    LoginUtls.DisLogin(event,Constants.TicketForm.TICKET_FORM_VIEW,"Ticket Form",tfUserDis.getText(), tfPassDis.getText());
                }
                else {
                     lbDisWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
