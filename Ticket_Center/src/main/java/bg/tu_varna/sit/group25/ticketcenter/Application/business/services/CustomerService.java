@@ -5,7 +5,6 @@ import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.Custom
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.CustomerListViewModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.concurrent.Task;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,6 +19,19 @@ public class CustomerService {
 
     private static class CustomerServiceHolder {
         public static final CustomerService INSTANCE =new CustomerService();
+    }
+
+    public Customer checkTickets(List<Customer> c)
+    {
+        List<Customer>customers=repository.getAll();
+        for(Customer customer:customers)
+        {
+            if(customer.equals(c))
+            {
+                return customer;
+            }
+        }
+        return (Customer) c;
     }
 
     public ObservableList<CustomerListViewModel>getAllCustomer()

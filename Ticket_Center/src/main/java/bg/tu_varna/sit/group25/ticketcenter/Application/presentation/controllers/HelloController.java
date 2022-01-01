@@ -1,7 +1,9 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.CustomerService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.DistributorService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.CustomerListViewModel;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LobbyModel;
 import javafx.beans.Observable;
 import javafx.collections.ObservableList;
@@ -15,7 +17,9 @@ import javafx.scene.input.MouseEvent;
 
 public class HelloController implements EventHandler <MouseEvent> {
 
-     private final CustomerService service=CustomerService.getInstance();
+   // private final CustomerService service=CustomerService.getInstance();
+    private final DistributorService service=DistributorService.getInstance();
+
 
     @FXML
     private Label welcomeText;
@@ -23,8 +27,11 @@ public class HelloController implements EventHandler <MouseEvent> {
     @FXML
     private Button lobbyButton;
 
+  //  @FXML
+   // private ListView<CustomerListViewModel>listView;
+
     @FXML
-    private ListView<CustomerListViewModel>listView;
+    private ListView<DistributorListViewModel>listView;
 
     @FXML
     private final LobbyModel model;
@@ -43,8 +50,10 @@ public class HelloController implements EventHandler <MouseEvent> {
     public void handle(MouseEvent mouseEvent) {
     welcomeText.setText(model.getWelcomeMessage());
 
+    ObservableList<DistributorListViewModel>distributorListViewModels= (ObservableList<DistributorListViewModel>) service.getAllDistributor();
+    listView.setItems(distributorListViewModels);
 
-    ObservableList<CustomerListViewModel> customerListViewModels =service.getAllCustomer();
-    listView.setItems(customerListViewModels);
+    //ObservableList<CustomerListViewModel> customerListViewModels =service.getAllCustomer();
+    //listView.setItems(customerListViewModels);
     }
 }

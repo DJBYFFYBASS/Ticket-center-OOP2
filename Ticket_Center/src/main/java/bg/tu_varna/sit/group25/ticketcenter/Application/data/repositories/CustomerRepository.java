@@ -83,6 +83,8 @@ public class CustomerRepository implements DAORepository<Customer>{
         return Optional.empty();
     }
 
+
+
     @Override
     public List<Customer> getAll() {
         Session session=Connection.openSession();

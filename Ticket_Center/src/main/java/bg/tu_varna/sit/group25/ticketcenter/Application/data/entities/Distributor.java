@@ -23,19 +23,27 @@ public class Distributor {
     private double Rating;
 
     @Column(name="Rating_Count",nullable = false)
-    private double Rating_Count;
+    private int Rating_Count;
+
 
     @Column(name="UserName_D",nullable = false)
     private String UserName_D;
 
     @Column(name="Password_D",nullable = false)
-    private int Password_D;
+    private String Password_D;
 
     @OneToMany(mappedBy = "Distributor_ID")
     private Set<Show> showSet;
 
     @OneToMany(mappedBy = "Distributor_ID")
     private Set<Form>formSet;
+
+    public Distributor(String userName_D, String password_D) {
+        UserName_D = userName_D;
+        Password_D = password_D;
+    }
+    public Distributor(){}
+
 
     public int getDistributor_ID() {
         return Distributor_ID;
@@ -81,7 +89,7 @@ public class Distributor {
         return Rating_Count;
     }
 
-    public void setRating_Count(double rating_Count) {
+    public void setRating_Count(int rating_Count) {
         Rating_Count = rating_Count;
     }
 
@@ -93,11 +101,11 @@ public class Distributor {
         UserName_D = userName_D;
     }
 
-    public int getPassword_D() {
+    public String getPassword_D() {
         return Password_D;
     }
 
-    public void setPassword_D(int password_D) {
+    public void setPassword_D(String password_D) {
         Password_D = password_D;
     }
 
@@ -109,9 +117,10 @@ public class Distributor {
         this.showSet = showSet;
     }
 
+
     @Override
     public String toString() {
-        return "distributor{" +
+        return "Distributor{" +
                 "Distributor_ID=" + Distributor_ID +
                 ", Name_D='" + Name_D + '\'' +
                 ", Phone_Number_D='" + Phone_Number_D + '\'' +
@@ -121,6 +130,7 @@ public class Distributor {
                 ", UserName_D='" + UserName_D + '\'' +
                 ", Password_D=" + Password_D +
                 ", showSet=" + showSet +
+                ", formSet=" + formSet +
                 '}';
     }
 }
