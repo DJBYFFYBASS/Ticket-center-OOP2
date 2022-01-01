@@ -26,6 +26,8 @@ public class TicketFormController implements Initializable {
     @FXML
     private TextField tfTicketCount;
     @FXML
+    private TextField tfTicketPrice;
+    @FXML
     private Button buttonSubmit;
     @FXML
     private Label lbWarning;
@@ -35,7 +37,7 @@ public class TicketFormController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != "") {
-                    FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText());
+                    FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText(),tfTicketPrice.getText());
                     LoginUtls.chooseLogin(event,Constants.RateingForm.RATING_FORM_VIEW,"Rating Form",null,null);
                 } else {
                     lbWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
