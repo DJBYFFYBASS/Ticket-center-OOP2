@@ -1,29 +1,34 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
-@Table(name="customer")
+@Table(name="customer",schema = "ticketcenter")
 @Entity
+@Embeddable
 public class Customer {
-    private static final long serialVersionUID=1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name="Customer_ID",nullable = false)
+    @JoinColumn(name="Customer_ID",table = "customer")
     private int Customer_ID;
 
-    @Column(name="Customer_Name",nullable = false)
+
+    @Column(name = "Customer_Name",table = "customer")
     private String Customer_Name;
 
-    @Column(name="Phone_Number",nullable = false)
+
+    @Column(name = "Phone_Number",table = "customer")
     private String Phone_Number;
 
-    @Column(name="Ticket_Limit",nullable = false)
+
+    @Column(name = "Ticket_Limit",table = "customer")
     private int Ticket_Limit;
 
-    @OneToMany(mappedBy = "Customer_ID")
-    private Set<Form> formSet;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "Customer_ID")
+    private List<Form> forms;
+
 
 
     public int getCustomer_ID() {

@@ -2,11 +2,10 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name="show_status")
+@Table(name="show_status",schema = "ticketcenter")
 @Entity
 public class Show_Status {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name="Show_Status_ID",nullable = false)
     private int Show_Status_ID;
 

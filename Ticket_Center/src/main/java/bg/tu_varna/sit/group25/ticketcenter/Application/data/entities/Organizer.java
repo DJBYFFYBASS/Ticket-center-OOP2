@@ -2,12 +2,11 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name="organizer")
+@Table(name="organizer",schema = "ticketcenter")
 @Entity
 public class Organizer {
     public String getPhone_Number_O;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name="Organizer_ID",nullable = false)
     private int Organizer_ID;
 

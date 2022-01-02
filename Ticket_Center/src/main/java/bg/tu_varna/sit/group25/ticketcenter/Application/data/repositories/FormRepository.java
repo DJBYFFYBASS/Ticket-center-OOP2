@@ -7,6 +7,8 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -24,6 +26,26 @@ public class FormRepository implements DAORepository<Form>
     {
         public static final  FormRepository INSTANCE=new  FormRepository();
     }
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
+    public void insertForm(Form form)
+    {
+        entityManager.createNativeQuery("INSERT INTO FROM (Sold_Tickets,Price_Ticket,Distributor_ID,Customer_ID,Show_ID) VALUES (?,?,?,?,?)")
+                .setParameter(1,form.getSold_Tickets())
+                .setParameter(2,form.getPrice_Ticket())
+                .setParameter(3,form.getDistributor_ID())
+                .setParameter(4,form.getCustomer_ID())
+                .setParameter(5,form.getShow_ID())
+                .executeUpdate();
+    }
+
+    public void insertF(Form form)
+    {
+        this.entityManager.persist(form);
+    }
+
 
     @Override
     public void save(Form obj) {
