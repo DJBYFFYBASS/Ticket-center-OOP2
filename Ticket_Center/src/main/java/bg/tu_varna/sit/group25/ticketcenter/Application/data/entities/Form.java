@@ -24,10 +24,11 @@ public class Form {
     private int Show_ID;
 
 
+
     @OneToMany(mappedBy = "Distributor_ID")
     private Set<Distributor>distributorSet;
 
-    @OneToMany(mappedBy = "Customer_ID")
+    @OneToMany(mappedBy = "Customer_Name")
     private Set<Customer>customerSet;
 
     @OneToMany(mappedBy = "Show_ID")

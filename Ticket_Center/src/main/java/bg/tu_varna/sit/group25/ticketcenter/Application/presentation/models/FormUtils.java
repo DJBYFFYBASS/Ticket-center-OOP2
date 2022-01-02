@@ -1,9 +1,19 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.CustomerService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Form;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.CustomerRepository;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
+
 public class FormUtils {
+
+    FormRepository formRepository=new FormRepository();
+    CustomerRepository customerRepository=new CustomerRepository();
+    CustomerService customerService=new CustomerService();
     public static void TicketForm(String name,String phoneNumber,String eventName,String ticketCount,String ticketPrice)
     {
-        //needs data base implementation after data verification
         if (phoneNumber.length()>10)
         {
 
