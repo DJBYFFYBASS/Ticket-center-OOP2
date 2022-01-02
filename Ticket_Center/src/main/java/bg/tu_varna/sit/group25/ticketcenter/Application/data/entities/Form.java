@@ -33,8 +33,6 @@ public class Form {
     @OneToMany(mappedBy = "Show_ID")
     private Set<Show>showSet;
 
-    public Form(String text, String text1, String text2, String text3, String text4, String text5, String text6, String text7) {
-    }
 
     public Form() {
 

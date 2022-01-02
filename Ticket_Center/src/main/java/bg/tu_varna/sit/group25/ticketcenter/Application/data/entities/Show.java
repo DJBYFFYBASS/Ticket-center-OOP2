@@ -39,6 +39,6 @@ public class Show {
     private Organizer Organizer_ID;
 
     @ManyToOne
-    @JoinColumn(name="Distributor_Distributor_ID",nullable = false)
+    @JoinColumn(name="Distributor_ID",nullable = false)
     private Distributor Distributor_ID;
 }
