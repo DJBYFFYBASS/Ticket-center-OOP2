@@ -13,6 +13,9 @@ public class CustomerListViewModel {
         this.limit=limit;
     }
 
+    public CustomerListViewModel(int distributor_id, String name_d, String phone_number_d, double fee_d, double rating, double rating_count, String userName_d, String password_d) {
+    }
+
     @Override
     public String toString() {
         return String.format( "%d | %s | %s | %d",summary, description, customer,limit);

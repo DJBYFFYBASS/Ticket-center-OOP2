@@ -1,11 +1,12 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
 import java.util.GregorianCalendar;
-@Table(name="show")
+import java.util.List;
+
+@Table(name="show",schema = "ticketcenter")
 @Entity
 public class Show {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name="Show_ID",nullable = false)
     private int Show_ID;
 
@@ -25,20 +26,16 @@ public class Show {
     @Column(name="Tickets",nullable = false)
     private int Tickets;
 
-    @ManyToOne
-    @JoinColumn(name="Show_Status_ID",nullable = false)
-    private Show_Status Status_ID;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "Show_ID")
+    private List<Form> forms;
 
     @ManyToOne
-    @JoinColumn(name = "Show_Type_ID",nullable = false)
-    private Show_Type Type_ID;
-
-
-    @ManyToOne
-    @JoinColumn(name="Organizer_ID",nullable = false)
-    private Organizer Organizer_ID;
-
-    @ManyToOne
-    @JoinColumn(name="Distributor_Distributor_ID",nullable = false)
+    @JoinColumn(name="Distributor_ID",nullable = false)
     private Distributor Distributor_ID;
+
+    @Embedded
+    Status_Show status_show;
+
+    @Embedded
+    Type_Show type_show;
 }

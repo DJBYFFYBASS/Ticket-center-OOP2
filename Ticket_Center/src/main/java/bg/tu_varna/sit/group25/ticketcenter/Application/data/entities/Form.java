@@ -3,11 +3,11 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name="form")
+@Table(name="Form",schema = "ticketcenter")
+@SecondaryTable(name="Customer",pkJoinColumns = @PrimaryKeyJoinColumn(name = "Customer_ID"))
 @Entity
 public class Form {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name= "Sold_Tickets",nullable = false)
     private int Sold_Tickets;
 
@@ -23,21 +23,23 @@ public class Form {
     @Column(name="Show_ID",nullable = false)
     private int Show_ID;
 
+    @Embedded
+    Customer customer;
 
-    @OneToMany(mappedBy = "Distributor_ID")
-    private Set<Distributor>distributorSet;
-
-    @OneToMany(mappedBy = "Customer_ID")
-    private Set<Customer>customerSet;
-
-    @OneToMany(mappedBy = "Show_ID")
-    private Set<Show>showSet;
-
-    public Form(String text, String text1, String text2, String text3, String text4, String text5, String text6, String text7) {
-    }
+    @ManyToOne
+    @JoinColumn(name="Show_ID",nullable = false)
+    private Show show;
 
     public Form() {
+    }
 
+    public Form(int sold_Tickets, double price_Ticket, int customer_ID, int distributor_ID, int show_ID, Customer customer) {
+        Sold_Tickets = sold_Tickets;
+        Price_Ticket = price_Ticket;
+        Customer_ID = customer_ID;
+        Distributor_ID = distributor_ID;
+        Show_ID = show_ID;
+        this.customer = customer;
     }
 
     public int getSold_Tickets() {
@@ -80,28 +82,12 @@ public class Form {
         Show_ID = show_ID;
     }
 
-    public Set<Distributor> getDistributorSet() {
-        return distributorSet;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setDistributorSet(Set<Distributor> distributorSet) {
-        this.distributorSet = distributorSet;
-    }
-
-    public Set<Customer> getCustomerSet() {
-        return customerSet;
-    }
-
-    public void setCustomerSet(Set<Customer> customerSet) {
-        this.customerSet = customerSet;
-    }
-
-    public Set<Show> getShowSet() {
-        return showSet;
-    }
-
-    public void setShowSet(Set<Show> showSet) {
-        this.showSet = showSet;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     @Override
@@ -112,9 +98,6 @@ public class Form {
                 ", Customer_ID=" + Customer_ID +
                 ", Distributor_ID=" + Distributor_ID +
                 ", Show_ID=" + Show_ID +
-                ", distributorSet=" + distributorSet +
-                ", customerSet=" + customerSet +
-                ", showSet=" + showSet +
                 '}';
     }
 }

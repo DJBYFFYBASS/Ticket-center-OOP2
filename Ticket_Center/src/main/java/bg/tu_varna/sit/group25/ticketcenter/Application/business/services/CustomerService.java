@@ -41,4 +41,18 @@ public class CustomerService {
         return FXCollections.observableList(customers.stream().map(c->new CustomerListViewModel(
                 c.getCustomer_ID(),c.getCustomer_Name(),c.getPhone_Number(),c.getTicket_Limit())).collect(Collectors.toList()));
     }
+
+    public Customer getCustomerByName(String name)
+    {
+        List<Customer> customers=CustomerRepository.getInstance().getAll();
+        Customer temp=new Customer();
+        for (Customer c:customers)
+        {
+            if(c.getCustomer_Name().equals(name))
+            {
+                temp=c;
+            }
+        }
+        return temp;
+    }
 }

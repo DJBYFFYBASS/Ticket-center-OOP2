@@ -3,11 +3,10 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name="show_type")
+@Table(name="show_type",schema = "ticketcenter")
 @Entity
 public class Show_Type {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JoinColumn(name="Show_Type_ID",nullable = false)
     private int Show_Type_ID;
 
