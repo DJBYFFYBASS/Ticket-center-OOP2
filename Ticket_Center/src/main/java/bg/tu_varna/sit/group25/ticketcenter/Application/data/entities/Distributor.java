@@ -135,7 +135,6 @@ public class Distributor {
         Password_D = password_D;
     }
 
-
     @Override
     public String toString() {
         return "Distributor{" +
