@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Table(name="show_type",schema = "ticketcenter")
@@ -13,7 +14,7 @@ public class Show_Type {
     @Column(name="Type",nullable = false)
     private int Type;
 
-    @OneToMany(mappedBy = "Show_ID")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "show_type")
     private Set<Show> showSet;
 
 }

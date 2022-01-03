@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Table(name="distributor",schema = "ticketcenter")
@@ -24,6 +25,8 @@ public class Distributor {
     @Column(name="Rating_Count",nullable = false)
     private int Rating_Count;
 
+    @Column(name = "Sold_Tickets_D",nullable = false)
+    private int Sold_Tickets_D;
 
     @Column(name="UserName_D",nullable = false)
     private String UserName_D;
@@ -31,10 +34,10 @@ public class Distributor {
     @Column(name="Password_D",nullable = false)
     private String Password_D;
 
-    @OneToMany(mappedBy = "Distributor_ID")
-    private Set<Show> showSet;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy ="Distributor_ID")
+    private List<Show> showSet;
 
-    @OneToMany(mappedBy = "Distributor_ID")
+    @OneToMany(mappedBy ="Distributor_ID")
     private Set<Form>formSet;
 
     public Distributor(String userName_D, String password_D) {
@@ -43,6 +46,30 @@ public class Distributor {
     }
     public Distributor(){}
 
+
+    public int getSold_Tickets_D() {
+        return Sold_Tickets_D;
+    }
+
+    public void setSold_Tickets_D(int sold_Tickets_D) {
+        Sold_Tickets_D = sold_Tickets_D;
+    }
+
+    public List<Show> getShowSet() {
+        return showSet;
+    }
+
+    public void setShowSet(List<Show> showSet) {
+        this.showSet = showSet;
+    }
+
+    public Set<Form> getFormSet() {
+        return formSet;
+    }
+
+    public void setFormSet(Set<Form> formSet) {
+        this.formSet = formSet;
+    }
 
     public int getDistributor_ID() {
         return Distributor_ID;
@@ -108,15 +135,6 @@ public class Distributor {
         Password_D = password_D;
     }
 
-    public Set<Show> getShowSet() {
-        return showSet;
-    }
-
-    public void setShowSet(Set<Show> showSet) {
-        this.showSet = showSet;
-    }
-
-
     @Override
     public String toString() {
         return "Distributor{" +
@@ -126,8 +144,9 @@ public class Distributor {
                 ", Fee_D=" + Fee_D +
                 ", Rating=" + Rating +
                 ", Rating_Count=" + Rating_Count +
+                ", Sold_Tickets_D=" + Sold_Tickets_D +
                 ", UserName_D='" + UserName_D + '\'' +
-                ", Password_D=" + Password_D +
+                ", Password_D='" + Password_D + '\'' +
                 ", showSet=" + showSet +
                 ", formSet=" + formSet +
                 '}';

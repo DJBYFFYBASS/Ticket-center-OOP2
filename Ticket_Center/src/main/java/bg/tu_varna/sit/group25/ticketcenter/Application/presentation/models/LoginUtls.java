@@ -120,7 +120,8 @@ public class LoginUtls {
             DistributorListViewModel distributorListViewModel = new DistributorListViewModel();
             ObservableList<DistributorListViewModel> distributor = service.getAllDistributor();
             for (DistributorListViewModel o : distributor) {
-                if (o.equals(distributor)) {
+                if (o.equals(distributor))
+                {
 
                     log = true;
                 }

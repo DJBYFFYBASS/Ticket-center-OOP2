@@ -1,13 +1,18 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.CustomerService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Form;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.CustomerRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
 
 public class FormUtils {
+
 
     FormRepository formRepository=new FormRepository();
     CustomerRepository customerRepository=new CustomerRepository();

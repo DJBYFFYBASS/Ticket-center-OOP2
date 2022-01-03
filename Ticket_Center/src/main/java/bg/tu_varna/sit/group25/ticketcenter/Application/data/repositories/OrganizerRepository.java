@@ -1,7 +1,6 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
