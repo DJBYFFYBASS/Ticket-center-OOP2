@@ -2,7 +2,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
-//import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.DistributorRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.OrganizerRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.*;
