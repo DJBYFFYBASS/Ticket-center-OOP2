@@ -60,7 +60,7 @@ public class TicketFormController implements Initializable {
                 if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != ""&&tfTicketPrice.getText()!="") {
                     FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText(),tfTicketPrice.getText());
 
-                    LoginUtls.chooseLogin(event,Constants.RateingForm.RATING_FORM_VIEW,"Rating Form",null,null);
+                    LoginUtls.DisRateing(event,Constants.RateingForm.RATING_FORM_VIEW,"Rating Form",disName);
                 } else {
                     lbWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
                 }
@@ -70,7 +70,7 @@ public class TicketFormController implements Initializable {
         buttonDisQuery.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                LoginUtls.DisQueryEntry(event,Constants.Distributor.DISTRIBUTOR_QUERY_VIEW,"Rating Form",disName);
             }
         });
     }
