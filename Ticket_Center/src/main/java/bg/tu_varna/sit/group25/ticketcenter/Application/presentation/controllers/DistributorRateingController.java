@@ -18,16 +18,22 @@ public class DistributorRateingController implements Initializable {
     private Button buttonSubmmitRating;
     @FXML
     private TextField tfRateing;
+
+    private String disName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         buttonSubmmitRating.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 if (tfRateing.getText()!="") {
-                    FormUtils.DisRateing(tfRateing.getText());
+                    FormUtils.DisRateing(tfRateing.getText(),disName);
                 }
                 LoginUtls.chooseLogin(event, Constants.Login.LOGIN_VIEW,"Login",null,null);
             }
         });
+    }
+    public void GetInfo(String name)
+    {
+        disName=name;
     }
 }

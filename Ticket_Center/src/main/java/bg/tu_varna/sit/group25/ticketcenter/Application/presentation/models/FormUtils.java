@@ -13,24 +13,32 @@ public class FormUtils {
     CustomerRepository customerRepository=new CustomerRepository();
     CustomerService customerService=new CustomerService();
     public static void TicketForm(String name,String phoneNumber,String eventName,String ticketCount,String ticketPrice)
-    {
+    {//submit the related data to the DB in the correct places
 
-        if (phoneNumber.length()>10)
-        {
-
-        }
     }
 
     public static void EventFormCreate(String Location,String Type,String Name,String Status,String Date,String Tickets,String Ticket_limit,String ID)
     {//make DB connection and insert data
 
     }
+
     public static void EventFormUpdate(String Location,String Type,String Name,String Status,String Date,String Tickets,String Ticket_limit,String ID)
     {//make DB connection and update data at specified ID
 
     }
-    public static void DisRateing(String Rateing)
-    {//add the rateing to
+
+    public static void EventQry(String eventName)
+    {//make DB data display by eventName
+
+    }
+
+    public static void DisRateing(String Rateing,String disName)
+    {//add the rateing to disName in the DB
+
+    }
+
+    public static void DisQuery(String name)
+    {//make query by name in the DB
 
     }
 }

@@ -46,6 +46,8 @@ public class EventFormController implements Initializable {
     @FXML
     private Button buttonUpdate;
     @FXML
+    private Button buttonQuery;
+    @FXML
     private Button buttonLoginReturn;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -73,6 +75,19 @@ public class EventFormController implements Initializable {
                 {
                     FormUtils.EventFormUpdate(tfEventLocation.getText(),tfEventType.getText(),tfEventName.getText(),tfEventStatus.getText(),tfEventDate.getText(),
                             tfEventTickets.getText(), tfEventTicketLimit.getText(),tfEventID.getText());
+                }
+                else
+                {
+                    lbEventFormWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
+                }
+            }
+        });
+        buttonQuery.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (tfEventName.getText()!="")
+                {
+                    LoginUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
                 }
                 else
                 {

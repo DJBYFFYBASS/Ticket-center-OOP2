@@ -46,14 +46,18 @@ public class TicketFormController implements Initializable {
     @FXML
     private Button buttonSubmit;
     @FXML
+    private Button buttonDisQuery;
+    @FXML
     private Label lbWarning;
+
+    private String disName;
     @Override
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         buttonSubmit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != "") {
+                if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != ""&&tfTicketPrice.getText()!="") {
                     FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText(),tfTicketPrice.getText());
 
                     LoginUtls.chooseLogin(event,Constants.RateingForm.RATING_FORM_VIEW,"Rating Form",null,null);
@@ -63,5 +67,16 @@ public class TicketFormController implements Initializable {
             }
 
         });
+        buttonDisQuery.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+    }
+    public void SetDisName(String name)
+    {
+        DistributorInForm.setText(DistributorInForm.getText()+" "+name);
+        disName=name;
     }
 }

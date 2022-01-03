@@ -25,6 +25,7 @@ public class Constants
     public static class Distributor
     {
         public static final String DISTRIBUTOR_LOGIN="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorLogin-view.fxml";
+        public static final String DISTRIBUTOR_QUERY_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorQuery-view.fxml";
     }
 
     public static class TicketForm
@@ -37,9 +38,11 @@ public class Constants
         public static final String RATING_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorRateing-view.fxml";
     }
 
+
     public static class EventForm
     {
         public static final String EVENT_FORM_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/EventForm-view.fxml";
+        public static final String EVENT_QUERY_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/EventQuery-View.fxml";
     }
 
     public static class Warning

@@ -2,14 +2,12 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
+//import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.DistributorRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.OrganizerRepository;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.DistributorLoginController;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.OrganizerLoginController;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.*;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.DistributorService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.OrganizerService;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.LoginFormController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -36,6 +34,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+
+//commented the 5th line //import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer; remove the "//" when fixed
 public class LoginUtls {
     @FXML
     private static TextField tfUserDis;
@@ -47,6 +47,21 @@ public class LoginUtls {
     public static OrganizerService service1 = new OrganizerService();
     private static boolean log = true;
 
+    public static void EventQueryEntry(ActionEvent actionEvent,String fxmlFile,String title,String eventName)
+    {
+        Parent root = null;
+        if (eventName != null ) {
+
+            try {
+                FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
+                EventQueryController eventQueryController=loader.getController();
+                eventQueryController.SetEventName(eventName);
+                root = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public static void chooseLogin(ActionEvent event, String fxmlFile, String title, String username, String pass) {
         Parent root = null;
         if (username != null && pass != null) {
@@ -114,28 +129,36 @@ public class LoginUtls {
                 Parent root = null;
                 try {
                     FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
-                    LoginFormController loginFormController = loader.getController();
+                    TicketFormController ticketFormController=loader.getController();
+                    ticketFormController.SetDisName(username);
                     root = loader.load();
-
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
                 finally {
-
-
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     stage.setTitle(title);
                     stage.setScene((new Scene(root, 600, 400)));
                     stage.show();
                 }
-
-
-
             }
-
-
         }
 
+    public static void DisQueryEntry(String disName)
+    {
+        Parent root = null;
+        if (disName != null ) {
+
+            try {
+                FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(disName));
+                DistributorQueryController distributorQueryController=loader.getController();
+                distributorQueryController.SetUserInfo(disName);
+                root = loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
 
 
