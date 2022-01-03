@@ -10,19 +10,22 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
+import java.lang.ref.PhantomReference;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DistributorQueryController implements Initializable {
 
+    private final FormService service=FormService.getInstance();
     @FXML
     private Label lbDisQry;
     @FXML
-    private ListView lvDistributor;
+    private ListView<FormListViewModel> lvDistributor;
 
     private String disName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         FormUtils.DisQuery(disName);
     }
 

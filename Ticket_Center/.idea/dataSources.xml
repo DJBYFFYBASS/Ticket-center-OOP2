@@ -9,7 +9,7 @@
 
 C:/Users/byffe/Documents/GitHub/Ticket-center-OOP2/Ticket_Center/src/main/resources/hibernate.cfg.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1:3306/TicketCenter</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3306/ticketcenter</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="@localhost" uuid="dbaaa5f3-854b-493f-a3f0-a40c37adfc08">

@@ -25,6 +25,9 @@ public class Distributor {
     @Column(name="Rating_Count",nullable = false)
     private int Rating_Count;
 
+    @Column(name = "Sold_Tickets_D",nullable = false)
+    private int Sold_Tickets_D;
+
     @Column(name="UserName_D",nullable = false)
     private String UserName_D;
 
@@ -43,6 +46,30 @@ public class Distributor {
     }
     public Distributor(){}
 
+
+    public int getSold_Tickets_D() {
+        return Sold_Tickets_D;
+    }
+
+    public void setSold_Tickets_D(int sold_Tickets_D) {
+        Sold_Tickets_D = sold_Tickets_D;
+    }
+
+    public List<Show> getShowSet() {
+        return showSet;
+    }
+
+    public void setShowSet(List<Show> showSet) {
+        this.showSet = showSet;
+    }
+
+    public Set<Form> getFormSet() {
+        return formSet;
+    }
+
+    public void setFormSet(Set<Form> formSet) {
+        this.formSet = formSet;
+    }
 
     public int getDistributor_ID() {
         return Distributor_ID;
@@ -109,8 +136,6 @@ public class Distributor {
     }
 
 
-
-
     @Override
     public String toString() {
         return "Distributor{" +
@@ -120,10 +145,11 @@ public class Distributor {
                 ", Fee_D=" + Fee_D +
                 ", Rating=" + Rating +
                 ", Rating_Count=" + Rating_Count +
+                ", Sold_Tickets_D=" + Sold_Tickets_D +
                 ", UserName_D='" + UserName_D + '\'' +
-                ", Password_D=" + Password_D +
+                ", Password_D='" + Password_D + '\'' +
                 ", showSet=" + showSet +
-
+                ", formSet=" + formSet +
                 '}';
     }
 }

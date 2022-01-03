@@ -16,6 +16,7 @@ public class EventQueryController implements Initializable {
     @FXML
     private ListView lvEvent;
 
+
     private String eventName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
