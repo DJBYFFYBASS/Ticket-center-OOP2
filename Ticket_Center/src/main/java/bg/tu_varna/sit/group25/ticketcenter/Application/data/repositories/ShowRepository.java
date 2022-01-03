@@ -1,0 +1,102 @@
+package bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories;
+
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show;
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+
+public class ShowRepository implements DAORepository<Show>
+{
+
+    private static class  ShowRepositoryHolder
+    {
+        public static final  ShowRepository INSTANCE=new  ShowRepository();
+    }
+    public static ShowRepository getInstance()
+    {
+        return ShowRepository.ShowRepositoryHolder.INSTANCE;
+    }
+    private static final Logger log=Logger.getLogger(ShowRepository.class);
+
+    @Override
+    public void save(Show obj) {
+        Session session= Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        try {
+            session.save(obj);
+            log.info("Show saved successfully");
+        }
+        catch (Exception ex)
+        {
+            log.error("Show save error"+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+    }
+
+    @Override
+    public void update(Show obj) {
+        Session session= Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        try {
+            session.update(obj);
+            log.info("Show saved successfully");
+        }
+        catch (Exception ex)
+        {
+            log.error("Show save error"+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+    }
+
+    @Override
+    public void delete(Show obj) {
+        Session session= Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        try {
+            session.delete(obj);
+            log.info("Show saved successfully");
+        }
+        catch (Exception ex)
+        {
+            log.error("Show save error"+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+    }
+
+    @Override
+    public Optional<Show> getById(int id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public List<Show> getAll() {
+        Session session=Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Show> shows=new LinkedList<>();
+        try {
+            String jpql = "SELECT t FROM Show t";
+            shows.addAll(session.createQuery(jpql, Show.class).getResultList());
+            log.info("get all customers");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get Customer error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return shows;
+    }
+}
