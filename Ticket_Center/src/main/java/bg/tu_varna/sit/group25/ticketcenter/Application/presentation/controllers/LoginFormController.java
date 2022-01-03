@@ -32,7 +32,7 @@ public class LoginFormController  implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
                 LoginUtls.chooseLogin(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
-                        "OrganizerLogin", String.valueOf(organizer.getPassword_O()), organizer.getUserName_O_O());
+                        "OrganizerLogin", String.valueOf(organizer.getPassword_O()), organizer.getUserName_O());
             }
         });
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {

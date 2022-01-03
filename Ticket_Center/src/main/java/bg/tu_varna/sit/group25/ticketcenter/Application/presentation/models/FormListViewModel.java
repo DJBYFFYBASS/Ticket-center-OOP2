@@ -1,5 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
+
 public class FormListViewModel
 {
     private int sold;

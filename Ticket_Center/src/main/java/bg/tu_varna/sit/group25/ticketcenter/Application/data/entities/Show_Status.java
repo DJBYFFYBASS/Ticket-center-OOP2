@@ -13,6 +13,6 @@ public class Show_Status {
     private String Status;
 
 
-    @OneToMany(mappedBy = "Status_ID")
+    @OneToMany(mappedBy = "show_status")
     private Set<Show> showSet;
 }

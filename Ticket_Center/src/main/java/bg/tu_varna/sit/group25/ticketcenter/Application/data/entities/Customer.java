@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Table(name="customer",schema = "ticketcenter")
 @Entity
-@Embeddable
+
 public class Customer {
 
     @Id
@@ -27,7 +27,7 @@ public class Customer {
     private int Ticket_Limit;
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "Customer_ID")
-    private List<Form> forms;
+    private Set<Form> forms;
 
 
 

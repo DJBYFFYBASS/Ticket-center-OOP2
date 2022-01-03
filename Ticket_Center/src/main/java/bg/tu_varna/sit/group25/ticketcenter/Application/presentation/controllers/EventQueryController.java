@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class EventQueryController implements Initializable {
+
     @FXML
     private Label lbEvent;
     @FXML

@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Table(name="distributor",schema = "ticketcenter")
@@ -24,17 +25,16 @@ public class Distributor {
     @Column(name="Rating_Count",nullable = false)
     private int Rating_Count;
 
-
     @Column(name="UserName_D",nullable = false)
     private String UserName_D;
 
     @Column(name="Password_D",nullable = false)
     private String Password_D;
 
-    @OneToMany(mappedBy = "Distributor_ID")
-    private Set<Show> showSet;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy ="Distributor_ID")
+    private List<Show> showSet;
 
-    @OneToMany(mappedBy = "Distributor_ID")
+    @OneToMany(mappedBy ="Distributor_ID")
     private Set<Form>formSet;
 
     public Distributor(String userName_D, String password_D) {
@@ -108,13 +108,7 @@ public class Distributor {
         Password_D = password_D;
     }
 
-    public Set<Show> getShowSet() {
-        return showSet;
-    }
 
-    public void setShowSet(Set<Show> showSet) {
-        this.showSet = showSet;
-    }
 
 
     @Override
@@ -129,7 +123,7 @@ public class Distributor {
                 ", UserName_D='" + UserName_D + '\'' +
                 ", Password_D=" + Password_D +
                 ", showSet=" + showSet +
-                ", formSet=" + formSet +
+
                 '}';
     }
 }

@@ -27,12 +27,13 @@ public class OrganizerService
     public ObservableList<OrganizerListViewModel> getAllOrganizers() {
         List<Organizer>organizers = repository.getAll();
 
-        return FXCollections.observableList(organizers.stream().map(o-> new OrganizerListViewModel(o.getOrganizer_ID(),
+        return FXCollections.observableList(organizers.stream().map(o-> new OrganizerListViewModel(
+                o.getOrganizer_ID(),
                 o.getName_O(),
                 o.getPhone_Number_O,
                 o.getFee_O(),
                 o.getFee_O(),
-                o.getUserName_O_O(),
+                o.getUserName_O,
                 o.getPassword_O())).collect(Collectors.toList()));
     }
 }

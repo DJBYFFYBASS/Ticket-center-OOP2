@@ -14,8 +14,6 @@ public class Form {
     @Column(name="Price_Ticket",nullable = false)
     private double Price_Ticket;
 
-    @Column(name="Customer_ID",nullable = false)
-    private int Customer_ID;
 
     @Column(name="Distributor_ID",nullable = false)
     private int Distributor_ID;
@@ -23,23 +21,24 @@ public class Form {
     @Column(name="Show_ID",nullable = false)
     private int Show_ID;
 
-    @Embedded
-    Customer customer;
+
+    @Column(name="Customer_ID",nullable = false)
+    private int Customer_ID;
 
     @ManyToOne
-    @JoinColumn(name="Show_ID",nullable = false)
+    @JoinColumn(name="Show_ID",nullable = false,insertable = false,updatable = false)
     private Show show;
 
-    public Form() {
-    }
-
-    public Form(int sold_Tickets, double price_Ticket, int customer_ID, int distributor_ID, int show_ID, Customer customer) {
+    public Form(int sold_Tickets, double price_Ticket, int distributor_ID, int show_ID, int customer_ID, Show show) {
         Sold_Tickets = sold_Tickets;
         Price_Ticket = price_Ticket;
-        Customer_ID = customer_ID;
         Distributor_ID = distributor_ID;
         Show_ID = show_ID;
-        this.customer = customer;
+        Customer_ID = customer_ID;
+        this.show = show;
+    }
+
+    public Form() {
     }
 
     public int getSold_Tickets() {
@@ -58,14 +57,6 @@ public class Form {
         Price_Ticket = price_Ticket;
     }
 
-    public int getCustomer_ID() {
-        return Customer_ID;
-    }
-
-    public void setCustomer_ID(int customer_ID) {
-        Customer_ID = customer_ID;
-    }
-
     public int getDistributor_ID() {
         return Distributor_ID;
     }
@@ -82,22 +73,31 @@ public class Form {
         Show_ID = show_ID;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomer_ID() {
+        return Customer_ID;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomer_ID(int customer_ID) {
+        Customer_ID = customer_ID;
+    }
+
+    public Show getShow() {
+        return show;
+    }
+
+    public void setShow(Show show) {
+        this.show = show;
     }
 
     @Override
     public String toString() {
-        return "form{" +
+        return "Form{" +
                 "Sold_Tickets=" + Sold_Tickets +
                 ", Price_Ticket=" + Price_Ticket +
-                ", Customer_ID=" + Customer_ID +
                 ", Distributor_ID=" + Distributor_ID +
                 ", Show_ID=" + Show_ID +
+                ", Customer_ID=" + Customer_ID +
+                ", show=" + show +
                 '}';
     }
 }

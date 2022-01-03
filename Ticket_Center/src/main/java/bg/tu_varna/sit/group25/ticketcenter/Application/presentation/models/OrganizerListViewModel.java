@@ -7,9 +7,9 @@ public class OrganizerListViewModel
     private String phone;
     private double fee;
     private String username;
-    private String password;
+    private int password;
 
-    public OrganizerListViewModel(int id, String name, String phone, double fee, String username, String password) {
+    public OrganizerListViewModel(int id, String name, String phone, double fee, String username, int password) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -27,6 +27,6 @@ public class OrganizerListViewModel
 
     public String toString()
     {
-        return String.format("%d | %s | %s | %f | %s | %s |",id,name,phone,fee,username,password);
+        return String.format("%d | %s | %s | %f | %s | %d |",id,name,phone,fee,username,password);
     }
 }
