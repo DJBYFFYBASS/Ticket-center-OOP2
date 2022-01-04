@@ -1,6 +1,10 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -11,20 +15,16 @@ import java.util.ResourceBundle;
 
 public class EventQueryController implements Initializable {
 
+    private final FormService service=FormService.getInstance();
     @FXML
     private Label lbEvent;
     @FXML
-    private ListView lvEvent;
+    private ListView<FormListViewModel>lvEvent;
 
-
-    private String eventName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        FormUtils.EventQry(eventName);
+        ObservableList<FormListViewModel> formListViewModels=service.getAllForms();
+        lvEvent.setItems(formListViewModels);
     }
-    public void SetEventName(String event)
-    {
-        lbEvent.setText(lbEvent.getText()+event);
-        eventName=event;
-    }
+
 }

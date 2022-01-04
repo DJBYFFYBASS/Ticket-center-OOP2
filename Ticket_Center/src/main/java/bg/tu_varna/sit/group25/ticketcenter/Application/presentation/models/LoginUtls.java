@@ -47,15 +47,12 @@ public class LoginUtls {
     public static OrganizerService service1 = new OrganizerService();
     private static boolean log = true;
 
-    public static void EventQueryEntry(ActionEvent event,String fxmlFile,String title,String eventName)
+    public static void EventQueryEntry(ActionEvent event,String fxmlFile,String title)
     {
         Parent root = null;
-        if (eventName != null ) {
-
             try {
                 FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
                 EventQueryController eventQueryController=loader.getController();
-                eventQueryController.SetEventName(eventName);
                 root = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -64,8 +61,6 @@ public class LoginUtls {
             stage.setTitle(title);
             stage.setScene((new Scene(root, 600, 400)));
             stage.show();
-        }
-
     }
     public static void chooseLogin(ActionEvent event, String fxmlFile, String title, String username, String pass) {
         Parent root = null;
@@ -107,7 +102,7 @@ public class LoginUtls {
             Parent root1 = null;
             try {
                 FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
-                LoginFormController loginFormController = loader.getController();
+                LoginFormController loginFormController= loader.getController();
                 root1 = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -185,6 +180,9 @@ public class LoginUtls {
             stage.setScene((new Scene(root, 600, 400)));
             stage.show();
         }
+    }
+
+    public static void DisLogin(ActionEvent event, String ticketFormView, String ticket_form) {
     }
 }
 

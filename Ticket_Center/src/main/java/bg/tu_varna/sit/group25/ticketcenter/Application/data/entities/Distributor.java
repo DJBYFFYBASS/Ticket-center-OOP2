@@ -34,10 +34,10 @@ public class Distributor {
     @Column(name="Password_D",nullable = false)
     private String Password_D;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy ="Distributor_ID")
-    private List<Show> showSet;
+    @OneToMany(mappedBy ="distributor")
+    private Set<Show> showSet;
 
-    @OneToMany(mappedBy ="Distributor_ID")
+    @OneToMany(mappedBy ="distributor")
     private Set<Form>formSet;
 
     public Distributor(String userName_D, String password_D) {
@@ -55,11 +55,11 @@ public class Distributor {
         Sold_Tickets_D = sold_Tickets_D;
     }
 
-    public List<Show> getShowSet() {
+    public Set<Show> getShowSet() {
         return showSet;
     }
 
-    public void setShowSet(List<Show> showSet) {
+    public void setShowSet(Set<Show> showSet) {
         this.showSet = showSet;
     }
 

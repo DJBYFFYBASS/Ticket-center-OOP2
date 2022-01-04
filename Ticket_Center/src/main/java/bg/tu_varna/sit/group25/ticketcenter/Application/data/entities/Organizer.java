@@ -1,14 +1,16 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 @Entity
 @Table(name="organizer")
-public class Organizer {
-    public String getPhone_Number_O;
-    public String getUserName_O;
+public class Organizer implements Serializable {
+    private static final long serialVersionUID=1L;
+
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @JoinColumn(name = "Organizer_ID",nullable = false)
     private int Organizer_ID;
 
@@ -27,7 +29,7 @@ public class Organizer {
     @Column(name = "Password_O",nullable = false)
     private int Password_O;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "organizer")
+    @OneToMany(mappedBy = "organizer")
     private List<Show> shows;
 
     public Organizer(int organizer_ID, String name_O, String phone_Number_O, double fee_O, String userName_O, int password_O) {

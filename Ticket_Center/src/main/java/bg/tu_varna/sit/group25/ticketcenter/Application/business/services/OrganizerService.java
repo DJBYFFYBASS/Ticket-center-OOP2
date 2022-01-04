@@ -30,10 +30,9 @@ public class OrganizerService
         return FXCollections.observableList(organizers.stream().map(o-> new OrganizerListViewModel(
                 o.getOrganizer_ID(),
                 o.getName_O(),
-                o.getPhone_Number_O,
+                o.getPhone_Number_O(),
                 o.getFee_O(),
-                o.getFee_O(),
-                o.getUserName_O,
+                o.getUserName_O(),
                 o.getPassword_O())).collect(Collectors.toList()));
     }
 }

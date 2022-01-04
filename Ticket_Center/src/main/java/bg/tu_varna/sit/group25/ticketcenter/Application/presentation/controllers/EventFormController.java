@@ -2,12 +2,15 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controller
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.CustomerService;
 //import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Form;
 // bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LoginUtls;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -15,6 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.w3c.dom.events.MouseEvent;
 
 import java.net.URL;
 import java.util.LinkedList;
@@ -22,6 +26,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class EventFormController implements Initializable {
+
+    private final ShowService service=ShowService.getInstance();
 
     @FXML
     private TextField tfEventLocation;
@@ -85,9 +91,9 @@ public class EventFormController implements Initializable {
         buttonQuery.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (tfEventName.getText()!="")
+                if (true)
                 {
-                    LoginUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
+                    LoginUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query");
                 }
                 else
                 {
@@ -102,4 +108,5 @@ public class EventFormController implements Initializable {
             }
         });
     }
+
 }

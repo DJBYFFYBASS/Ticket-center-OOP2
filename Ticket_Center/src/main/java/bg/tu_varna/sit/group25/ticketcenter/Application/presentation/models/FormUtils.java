@@ -13,10 +13,6 @@ import javafx.scene.control.ListView;
 
 public class FormUtils {
 
-
-    FormRepository formRepository=new FormRepository();
-    CustomerRepository customerRepository=new CustomerRepository();
-    CustomerService customerService=new CustomerService();
     public static void TicketForm(String name,String phoneNumber,String eventName,String ticketCount,String ticketPrice)
     {//submit the related data to the DB in the correct places
 
@@ -32,8 +28,10 @@ public class FormUtils {
 
     }
 
-    public static void EventQry(String eventName)
+    public static void EventQry()
     {//make DB data display by eventName
+
+
 
     }
 

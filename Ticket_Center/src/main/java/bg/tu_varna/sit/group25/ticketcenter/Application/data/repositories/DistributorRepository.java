@@ -20,6 +20,10 @@ public class DistributorRepository implements DAORepository<Distributor>
     {
         return DistributorRepository.DistributorRepositoryHolder.INSTANCE;
     }
+    private static class DistributorRepositoryHolder
+    {
+        public static final DistributorRepository INSTANCE=new DistributorRepository();
+    }
 
     @Override
     public void save(Distributor obj) {
@@ -99,9 +103,6 @@ public class DistributorRepository implements DAORepository<Distributor>
             return distributors;
     }
 
-    private static class DistributorRepositoryHolder
-    {
-        public static final DistributorRepository INSTANCE=new DistributorRepository();
-    }
+
 
 }

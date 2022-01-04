@@ -32,9 +32,9 @@ public class FormService
         return FXCollections.observableList(forms.stream().map(f->new FormListViewModel(
                 f.getSold_Tickets(),
                 f.getPrice_Ticket(),
-                f.getDistributor_ID(),
-                f.getCustomer_ID(),
-                f.getShow_ID()
+                f.getDistributor().getDistributor_ID(),
+                f.getCustomer().getCustomer_ID(),
+                f.getShow().getShow_ID()
         )).collect(Collectors.toList()));
     }
 }
