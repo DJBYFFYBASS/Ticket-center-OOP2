@@ -5,8 +5,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.sql.DriverManager;
+
+
 public class Connection
 {
+
     private static final Logger log=Logger.getLogger(Connection.class);
     private static SessionFactory sessionFactory;
 

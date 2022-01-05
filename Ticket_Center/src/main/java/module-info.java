@@ -12,6 +12,14 @@ module bg.tu_varna.sit.group25.ticketcenter {
     requires log4j;
     requires org.hibernate.orm.core;
     requires java.persistence;
+    requires java.naming;
+    requires java.sql;
+
+    opens bg.tu_varna.sit.group25.ticketcenter.Application.data.entities to org.hibernate.orm.core;
+    exports bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
+
+    opens bg.tu_varna.sit.group25.ticketcenter.Application.data.access to org.hibernate.orm.core;
+    exports bg.tu_varna.sit.group25.ticketcenter.Application.data.access   ;
 
     exports bg.tu_varna.sit.group25.ticketcenter.Application.application;
     opens bg.tu_varna.sit.group25.ticketcenter.Application.application to javafx.fxml;
