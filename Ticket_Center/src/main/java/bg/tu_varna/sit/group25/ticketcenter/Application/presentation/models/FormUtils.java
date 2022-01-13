@@ -11,15 +11,21 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 
+import java.util.GregorianCalendar;
+
 public class FormUtils {
 
     public static void TicketForm(String name,String phoneNumber,String eventName,String ticketCount,String ticketPrice)
     {//submit the related data to the DB in the correct places
 
+
+
     }
 
-    public static void EventFormCreate(String Location,String Type,String Name,String Status,String Date,String Tickets,String Ticket_limit,String ID)
+    public static void EventFormCreate(String Location, int Type, String Name, int Status, String Date, int Tickets, int Ticket_limit, int ID)
     {//make DB connection and insert data
+
+
 
     }
 

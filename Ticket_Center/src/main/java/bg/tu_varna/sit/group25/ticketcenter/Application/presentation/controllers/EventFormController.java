@@ -4,9 +4,11 @@ import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.Custom
 //import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Form;
 // bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LoginUtls;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;
@@ -18,12 +20,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.w3c.dom.events.MouseEvent;
 
 import java.net.URL;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.*;
 
 public class EventFormController implements Initializable {
 
@@ -58,21 +64,23 @@ public class EventFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         buttonCreate.setOnAction(new EventHandler<ActionEvent>() {
+
             @Override
             public void handle(ActionEvent event) {
                 if (tfEventLocation.getText()!=""&&tfEventType.getText()!=""&&tfEventType.getText()!=""&&tfEventStatus.getText()!=""&&tfEventDate.getText()!=""
                         &&tfEventTickets.getText()!=""&&tfEventTicketLimit.getText()!=""&&tfEventID.getText()!="")
                 {
-
-                    FormUtils.EventFormCreate(tfEventLocation.getText(),tfEventType.getText(),tfEventName.getText(),tfEventStatus.getText(),tfEventDate.getText(),
-                           tfEventTickets.getText(), tfEventTicketLimit.getText(),tfEventID.getText());
+                    //FormUtils.EventFormCreate(tfEventLocation.getText(),Integer.parseInt(tfEventType.getText()),tfEventName.getText(), Integer.parseInt(tfEventStatus.getText()), tfEventDate.getText(),
+                        //    Integer.parseInt(tfEventTickets.getText()), Integer.parseInt(tfEventTicketLimit.getText()),Integer.parseInt(tfEventID.getText()));
                 }
                 else
                 {
                     lbEventFormWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
                 }
+
             }
         });
+
         buttonUpdate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
