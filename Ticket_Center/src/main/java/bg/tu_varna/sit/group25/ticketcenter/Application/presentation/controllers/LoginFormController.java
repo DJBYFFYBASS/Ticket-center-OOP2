@@ -31,7 +31,7 @@ public class LoginFormController  implements Initializable {
         OrganizerLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                LoginUtls.chooseLogin(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
+                LoginUtls.OrgLogin(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
                         "OrganizerLogin", String.valueOf(organizer.getPassword_O()), organizer.getUserName_O());
             }
         });
@@ -39,7 +39,7 @@ public class LoginFormController  implements Initializable {
             @Override
             public void handle(ActionEvent actionEvent) {
 
-                    LoginUtls.chooseLogin(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
+                    LoginUtls.DisLogin(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
                             "DistributorLogin", distributor.getUserName_D(), distributor.getPassword_D());
 
             }
