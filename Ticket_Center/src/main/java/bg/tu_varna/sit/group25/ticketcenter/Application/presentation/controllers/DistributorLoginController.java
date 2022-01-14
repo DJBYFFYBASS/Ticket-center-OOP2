@@ -49,7 +49,7 @@ public class DistributorLoginController implements Initializable {
               //     if (tfUserDis.getText().equals(service.getName())) {
 
 
-                       LoginUtls.DisLogin(event, Constants.TicketForm.TICKET_FORM_VIEW, "Ticket Form");
+                       LoginUtls.DisLogin(event, Constants.TicketForm.TICKET_FORM_VIEW, "Ticket Form",tfUserDis.getText(),tfPassDis.getText());
                   // }
                }
                else {

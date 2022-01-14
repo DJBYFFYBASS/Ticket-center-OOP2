@@ -101,7 +101,7 @@ public class EventFormController implements Initializable {
             public void handle(ActionEvent event) {
                 if (true)
                 {
-                    LoginUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query");
+                    LoginUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
                 }
                 else
                 {

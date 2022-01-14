@@ -27,4 +27,7 @@ public class EventQueryController implements Initializable {
         lvEvent.setItems(formListViewModels);
     }
 
+    public void SetEventName(String eventName) {
+        lbEvent.setText(lbEvent.getText()+eventName);
+    }
 }
