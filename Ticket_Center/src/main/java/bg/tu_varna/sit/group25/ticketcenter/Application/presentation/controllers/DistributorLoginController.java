@@ -15,12 +15,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.net.URL;
 import java.sql.DatabaseMetaData;
 import java.util.ResourceBundle;
 
 public class DistributorLoginController implements Initializable {
+    Session session8 = Connection.openSession();
+    Transaction transaction = session8.beginTransaction();
+    public static DistributorService service = new DistributorService();
+    private static boolean log = true;
+
 
     @FXML
     private TextField tfUserDis;
@@ -35,9 +42,15 @@ public class DistributorLoginController implements Initializable {
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-               if (tfPassDis.getText().isBlank()==false&&tfUserDis.getText().isBlank()==false)
-                {
-                    LoginUtls.DisLogin(event,Constants.TicketForm.TICKET_FORM_VIEW,"Ticket Form",tfUserDis.getText(), tfPassDis.getText());
+              //  DistributorListViewModel distributorListViewModel=new DistributorListViewModel();
+              //  ObservableList<DistributorListViewModel> distributor= service.getName();
+              //  ObservableList<DistributorListViewModel> distributor1= service.getPass();
+               if (tfPassDis.getText().isBlank()==false&&tfUserDis.getText().isBlank()==false) {
+              //     if (tfUserDis.getText().equals(service.getName())) {
+
+
+                       LoginUtls.DisLogin(event, Constants.TicketForm.TICKET_FORM_VIEW, "Ticket Form");
+                  // }
                }
                else {
                     lbDisWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);

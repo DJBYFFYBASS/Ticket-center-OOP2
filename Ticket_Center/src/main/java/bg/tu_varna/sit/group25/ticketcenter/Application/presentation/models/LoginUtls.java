@@ -107,7 +107,7 @@ public class LoginUtls {
             Parent root1 = null;
             try {
                 FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
-                OrganizerLoginController loginFormController = loader.getController();
+                LoginFormController loginFormController = loader.getController();
                 root1 = loader.load();
             } catch (IOException e) {
                 e.printStackTrace();

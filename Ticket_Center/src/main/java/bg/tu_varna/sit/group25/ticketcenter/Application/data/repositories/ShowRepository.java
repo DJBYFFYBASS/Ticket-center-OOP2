@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.net.PortUnreachableException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -80,21 +81,25 @@ public class ShowRepository implements DAORepository<Show>
         return Optional.empty();
     }
 
+
     @Override
-    public List<Show> getAll() {
-        Session session=Connection.openSession();
-        Transaction transaction= session.beginTransaction();
+    public List<Show> getAll()
+    {
+        Session session1=Connection.openSession();
+        Transaction transaction= session1.beginTransaction();
         List<Show> shows=new LinkedList<>();
-        try {
-            String jpql = "SELECT t FROM Show t";
-            shows.addAll(session.createQuery(jpql, Show.class).getResultList());
+        try
+        {
+            String jpql = "SELECT s FROM Show s ";
+            shows.addAll(session1.createQuery(jpql, Show.class).getResultList());
             log.info("get all customers");
         }
         catch (Exception ex)
         {
             log.error("Get Customer error: "+ex.getMessage());
         }
-        finally {
+        finally
+        {
             transaction.commit();
         }
         return shows;

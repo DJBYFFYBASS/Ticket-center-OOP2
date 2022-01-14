@@ -2,17 +2,19 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 import java.util.Set;
 
-@Table(name="customer",schema = "ticketcenter")
+@Table(name="customer")
 @Entity
 
-public class Customer {
+public class Customer implements Serializable{
+private static final long serialVersionUID=1L;
+
 
     @Id
-    @JoinColumn(name="Customer_ID",table = "customer")
-    private int Customer_ID;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @JoinColumn(name="Customer_ID",nullable = false)
+    private Long Customer_ID;
 
 
     @Column(name = "Customer_Name",table = "customer")
@@ -26,16 +28,15 @@ public class Customer {
     @Column(name = "Ticket_Limit",table = "customer")
     private int Ticket_Limit;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "Customer_ID")
+    @OneToMany(mappedBy = "customer")
     private Set<Form> forms;
 
 
-
-    public int getCustomer_ID() {
+    public Long getCustomer_ID() {
         return Customer_ID;
     }
 
-    public void setCustomer_ID(int customer_ID) {
+    public void setCustomer_ID(Long customer_ID) {
         Customer_ID = customer_ID;
     }
 
@@ -63,13 +64,22 @@ public class Customer {
         Ticket_Limit = ticket_Limit;
     }
 
+    public Set<Form> getForms() {
+        return forms;
+    }
+
+    public void setForms(Set<Form> forms) {
+        this.forms = forms;
+    }
+
     @Override
     public String toString() {
-        return "customer{" +
+        return "Customer{" +
                 "Customer_ID=" + Customer_ID +
                 ", Customer_Name='" + Customer_Name + '\'' +
                 ", Phone_Number='" + Phone_Number + '\'' +
                 ", Ticket_Limit=" + Ticket_Limit +
+                ", forms=" + forms +
                 '}';
     }
 }

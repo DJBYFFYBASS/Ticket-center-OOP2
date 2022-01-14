@@ -26,6 +26,9 @@ public class DistributorListViewModel
 
     }
 
+    public DistributorListViewModel(String userName_d) {
+    }
+
     public String toString()
     {return String.format(" %d | %s | %s | %f | %f | %d | %s | %s |",id,name,phone,fee,rating,rating_count,username,password);}
 }

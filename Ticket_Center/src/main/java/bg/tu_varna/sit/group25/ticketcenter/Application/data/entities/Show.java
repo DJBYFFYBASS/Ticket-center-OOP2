@@ -7,9 +7,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "show")
 public class Show {
+    private static final long serialVersionUID=1L;
+
 
     @Id
-    @JoinColumn(name = "Show_ID",table = "show")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name = "Show_ID",table = "show")
     private  int Show_ID;
 
     @Column(name = "Show_Title",table ="show")
@@ -39,8 +42,9 @@ public class Show {
     @JoinColumn(name = "Organizer_ID",nullable = false)
     private Organizer organizer;
 
-    @Column(name = "Distributor_ID",nullable = false)
-    private int Distributor_ID;
+    @ManyToOne
+    @JoinColumn(name = "Distributor_ID",nullable = false)
+    private Distributor distributor;
 
     public int getShow_ID() {
         return Show_ID;
@@ -114,12 +118,12 @@ public class Show {
         this.organizer = organizer;
     }
 
-    public int getDistributor_ID() {
-        return Distributor_ID;
+    public Distributor getDistributor() {
+        return distributor;
     }
 
-    public void setDistributor_ID(int distributor_ID) {
-        Distributor_ID = distributor_ID;
+    public void setDistributor(Distributor distributor) {
+        this.distributor = distributor;
     }
 
     @Override
@@ -134,7 +138,7 @@ public class Show {
                 ", show_status=" + show_status +
                 ", show_type=" + show_type +
                 ", organizer=" + organizer +
-                ", Distributor_ID=" + Distributor_ID +
+                ", distributor=" + distributor +
                 '}';
     }
 }

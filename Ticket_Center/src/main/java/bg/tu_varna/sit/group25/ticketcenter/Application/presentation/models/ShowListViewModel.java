@@ -3,6 +3,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show_Status;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show_Type;
 
 import java.util.GregorianCalendar;
 
@@ -14,12 +15,12 @@ public class ShowListViewModel
     public String location;
     public int max;
     public int tickets;
-    public int status;
-    public int s_type;
-    public int organizer;
-    public int distributor;
+    public long status;
+    public long s_type;
+    public long organizer;
+    public long distributor;
 
-    public ShowListViewModel(int s_id, String title, GregorianCalendar date, String location, int max, int tickets, int status, int s_type, int organizer, int distributor) {
+    public ShowListViewModel(int s_id, String title, GregorianCalendar date, String location, int max, int tickets, int status, int s_type, int organizer, long distributor) {
         this.s_id = s_id;
         this.title = title;
         this.date = date;
@@ -32,8 +33,7 @@ public class ShowListViewModel
         this.distributor = distributor;
     }
 
-
-    public ShowListViewModel(int show_id, String show_title, GregorianCalendar show_date, String location, int maxPlaces, int tickets, Show_Status show_status, Organizer organizer, int distributor_id) {
+    public ShowListViewModel(int show_id, String show_title, GregorianCalendar show_date, String location, int maxPlaces, int tickets, Show_Status show_status, Show_Type show_type, Organizer organizer, Distributor distributor) {
     }
 
     public String toString()

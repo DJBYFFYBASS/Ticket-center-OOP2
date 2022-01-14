@@ -34,8 +34,9 @@ public ObservableList<ShowListViewModel>getAllShows()
             s.getMaxPlaces(),
             s.getTickets(),
             s.getShow_status(),
+            s.getShow_type(),
             s.getOrganizer(),
-            s.getDistributor_ID()
+            s.getDistributor()
     )).collect(Collectors.toList()));
 }
     }

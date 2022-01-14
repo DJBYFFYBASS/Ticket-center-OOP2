@@ -21,6 +21,23 @@ public class DistributorService {
         public static final DistributorService INSTANCE = new DistributorService();
     }
 
+    public ObservableList<DistributorListViewModel>getPass()
+    {
+        List<Distributor>distributors=repository.getAll();
+
+        return FXCollections.observableList(distributors.stream().map(d -> new DistributorListViewModel(
+                d.getPassword_D()
+        )).collect(Collectors.toList()));
+    }
+
+    public ObservableList<DistributorListViewModel>getName()
+    {
+        List<Distributor>distributors=repository.getAll();
+
+        return FXCollections.observableList(distributors.stream().map(d -> new DistributorListViewModel(
+                d.getUserName_D()
+        )).collect(Collectors.toList()));
+    }
 
     public ObservableList<DistributorListViewModel> getAllDistributor() {
         List<Distributor> distributors = repository.getAll();

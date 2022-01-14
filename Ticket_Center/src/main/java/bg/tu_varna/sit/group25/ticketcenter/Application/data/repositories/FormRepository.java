@@ -35,9 +35,9 @@ public class FormRepository implements DAORepository<Form>
         entityManager.createNativeQuery("INSERT INTO FROM (Sold_Tickets,Price_Ticket,Distributor_ID,Customer_ID,Show_ID) VALUES (?,?,?,?,?)")
                 .setParameter(1,form.getSold_Tickets())
                 .setParameter(2,form.getPrice_Ticket())
-                .setParameter(3,form.getDistributor_ID())
-                .setParameter(4,form.getCustomer_ID())
-                .setParameter(5,form.getShow_ID())
+                .setParameter(3,form.getDistributor().getDistributor_ID())
+                .setParameter(4,form.getCustomer().getCustomer_ID())
+                .setParameter(5,form.getShow().getShow_ID())
                 .executeUpdate();
     }
 
@@ -123,6 +123,5 @@ public class FormRepository implements DAORepository<Form>
             transaction.commit();
         }
         return forms;
-
     }
 }
