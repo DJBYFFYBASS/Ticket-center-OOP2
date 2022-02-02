@@ -26,9 +26,9 @@ import java.util.ResourceBundle;
 
 public class TicketFormController implements Initializable {
 
-    CustomerService customerService=new CustomerService();
-    FormRepository formRepository=new FormRepository();
-    CustomerRepository customerRepository=new CustomerRepository();
+   // CustomerService customerService=new CustomerService();
+    //FormRepository formRepository=new FormRepository();
+    //CustomerRepository customerRepository=new CustomerRepository();
 
 
     @FXML

@@ -95,7 +95,8 @@ public class LoginUtls {
 
     public static void OrgLogin(ActionEvent event, String fxmlFile, String title, String username, String pass)
     {//add DB distributor user and pass check
-        OrganizerListViewModel organizerListViewModel = new OrganizerListViewModel();
+
+        /*OrganizerListViewModel organizerListViewModel = new OrganizerListViewModel();
         ObservableList<OrganizerListViewModel> organizer = service1.getAllOrganizers();
         for (OrganizerListViewModel o : organizer) {
             if (o.equals(organizer)) {
@@ -103,6 +104,8 @@ public class LoginUtls {
                 log = true;
             }
         }
+        *
+         */
         if (log == true) {
             Parent root1 = null;
             try {
@@ -120,8 +123,10 @@ public class LoginUtls {
     }
 
 
-        public static void DisLogin (ActionEvent event, String fxmlFile, String title, String username, String pass) //add DB distributor user and pass check
+        public static void DisLogin (ActionEvent event, String fxmlFile, String title, String username, String pass)
+        //add DB distributor user and pass check
         {
+            /*
             DistributorListViewModel distributorListViewModel = new DistributorListViewModel();
             ObservableList<DistributorListViewModel> distributor = service.getAllDistributor();
             for (DistributorListViewModel o : distributor) {
@@ -131,13 +136,16 @@ public class LoginUtls {
                     log = true;
                 }
             }
+
+*/
             if (log == true) {
                 Parent root = null;
                 try {
                     FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
+                    root = loader.load();
                     TicketFormController ticketFormController=loader.getController();
                     ticketFormController.SetDisName(username);
-                    root = loader.load();
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -148,6 +156,26 @@ public class LoginUtls {
                     stage.show();
                 }
             }
+
+/*
+            if (log == true) {
+                Parent root1 = null;
+                try {
+                    FXMLLoader loader = new FXMLLoader(LoginUtls.class.getResource(fxmlFile));
+                    root1 = loader.load();
+                    TicketFormController ticketFormController=loader.getController();
+                    ticketFormController.SetDisName(username);
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setTitle(title);
+                stage.setScene((new Scene(root1, 600, 400)));
+                stage.show();
+            }
+*/
+
         }
 
         public static void DisRateing(ActionEvent event,String fxmlFile,String title,String disName)

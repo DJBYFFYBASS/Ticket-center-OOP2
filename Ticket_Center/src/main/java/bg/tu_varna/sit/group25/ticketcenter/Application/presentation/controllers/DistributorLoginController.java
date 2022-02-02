@@ -42,20 +42,19 @@ public class DistributorLoginController implements Initializable {
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //  DistributorListViewModel distributorListViewModel=new DistributorListViewModel();
-                //  ObservableList<DistributorListViewModel> distributor= service.getName();
-                //  ObservableList<DistributorListViewModel> distributor1= service.getPass();
-                //if (tfPassDis.getText().isBlank()==false&&tfUserDis.getText().isBlank()==false) {
-                //     if (tfUserDis.getText().equals(service.getName())) {
-                if(tfPassDis.getText()!=""&&tfUserDis.getText()!=""){
+              //  DistributorListViewModel distributorListViewModel=new DistributorListViewModel();
+              //  ObservableList<DistributorListViewModel> distributor= service.getName();
+              //  ObservableList<DistributorListViewModel> distributor1= service.getPass();
+               if (tfPassDis.getText().isBlank()==false&&tfUserDis.getText().isBlank()==false) {
+              //     if (tfUserDis.getText().equals(service.getName())) {
 
 
-                    LoginUtls.DisLogin(event, Constants.TicketForm.TICKET_FORM_VIEW, "Ticket Form",tfUserDis.getText(),tfPassDis.getText());
-                    // }
-                }
-                else {
+                       LoginUtls.DisLogin(event, Constants.TicketForm.TICKET_FORM_VIEW, "Ticket Form",tfUserDis.getText(),tfPassDis.getText());
+                  // }
+               }
+               else {
                     lbDisWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
-                }
+               }
             }
         });
     }

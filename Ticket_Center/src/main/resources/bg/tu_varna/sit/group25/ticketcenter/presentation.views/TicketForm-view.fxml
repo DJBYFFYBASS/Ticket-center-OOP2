@@ -45,13 +45,13 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="152.0" layoutY="232.0" />
+      <TextField fx:id="tfTicketPrice" layoutX="152.0" layoutY="232.0" />
       <Label layoutX="50.0" layoutY="234.0" text="Ticket price">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="335.0" layoutY="15.0" mnemonicParsing="false" text="Query">
+      <Button fx:id="buttonDisQuery" layoutX="335.0" layoutY="15.0" mnemonicParsing="false" text="Query">
          <font>
             <Font name="Arial" size="18.0" />
          </font>

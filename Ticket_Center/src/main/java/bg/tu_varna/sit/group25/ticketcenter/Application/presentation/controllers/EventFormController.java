@@ -33,7 +33,7 @@ import java.util.*;
 
 public class EventFormController implements Initializable {
 
-    private final ShowService service=ShowService.getInstance();
+    //private final ShowService service=ShowService.getInstance();
 
     @FXML
     private TextField tfEventLocation;

@@ -18,8 +18,8 @@ import java.util.ResourceBundle;
 
 public class LoginFormController  implements Initializable {
 
-    private Organizer organizer=new Organizer();
-    private Distributor distributor=new Distributor();
+    //private Organizer organizer=new Organizer();
+    //private Distributor distributor=new Distributor();
 
     @FXML
     private Button OrganizerLoginButton;
@@ -31,16 +31,16 @@ public class LoginFormController  implements Initializable {
         OrganizerLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                LoginUtls.OrgLogin(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
-                        "OrganizerLogin", String.valueOf(organizer.getPassword_O()), organizer.getUserName_O());
+                LoginUtls.chooseLogin(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
+                        "OrganizerLogin", null, null);
             }
         });
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
 
-                    LoginUtls.DisLogin(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
-                            "DistributorLogin", distributor.getUserName_D(), distributor.getPassword_D());
+                    LoginUtls.chooseLogin(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
+                            "DistributorLogin", null, null);
 
             }
         });
