@@ -47,7 +47,7 @@ public class LoginUtls {
     public static OrganizerService service1 = new OrganizerService();
     private static boolean log = true;
 
-    public static void EventQueryEntry(ActionEvent event,String fxmlFile,String title)
+    public static void EventQueryEntry(ActionEvent event,String fxmlFile,String title,String eventName)
     {
         Parent root = null;
             try {
@@ -161,6 +161,7 @@ public class LoginUtls {
                 stage.setTitle(title);
                 stage.setScene((new Scene(root, 600, 400)));
                 stage.show();
+
             }
         }
     public static void DisQueryEntry(ActionEvent event,String fxmlFile,String title, String disName)

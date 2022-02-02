@@ -9,13 +9,11 @@ public class Show_Status implements Serializable {
     private static final long serialVersionUID=1L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @JoinColumn(name="Show_Status_ID",nullable = false)
     private long Show_Status_ID;
 
     @Column(name="Status",nullable = false)
     private String Status;
-
 
     @OneToMany(mappedBy = "show_status")
     private Set<Show> showSet;

@@ -11,14 +11,13 @@ public class Show_Type implements Serializable {
     private static final long serialVersionUID=1L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @JoinColumn(name="Show_Type_ID",nullable = false)
     private int Show_Type_ID;
 
     @Column(name="Type",nullable = false)
     private int Type;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "show_type")
+    @OneToMany(mappedBy = "show_type")
     private Set<Show> showSet;
 
     public int getShow_Type_ID() {

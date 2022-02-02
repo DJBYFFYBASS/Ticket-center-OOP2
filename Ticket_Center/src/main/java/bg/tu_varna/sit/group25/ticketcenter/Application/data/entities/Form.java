@@ -9,7 +9,6 @@ public class Form {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="Form_ID",nullable = false)
     private long Form_Id;
 

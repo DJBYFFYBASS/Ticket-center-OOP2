@@ -12,7 +12,6 @@ private static final long serialVersionUID=1L;
 
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @JoinColumn(name="Customer_ID",nullable = false)
     private Long Customer_ID;
 

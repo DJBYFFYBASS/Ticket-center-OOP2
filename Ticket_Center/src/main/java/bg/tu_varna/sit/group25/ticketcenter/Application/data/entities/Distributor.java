@@ -3,17 +3,17 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 
-@Table(name="distributor",schema = "ticketcenter")
+@Table(name="distributor")
 @Entity
 public class Distributor {
     @Id
     @JoinColumn(name="Distributor_ID",nullable = false)
     private int Distributor_ID;
 
-    @JoinColumn(name="Name_D",nullable = false)
+    @Column(name="Name_D",nullable = false)
     private String Name_D;
 
-    @JoinColumn(name="Phone_Number_D",nullable = false)
+    @Column(name="Phone_Number_D",nullable = false)
     private String Phone_Number_D;
 
     @Column(name="Fee_D",nullable = false)
@@ -39,12 +39,6 @@ public class Distributor {
 
     @OneToMany(mappedBy ="distributor")
     private Set<Form>formSet;
-
-    public Distributor(String userName_D, String password_D) {
-        UserName_D = userName_D;
-        Password_D = password_D;
-    }
-    public Distributor(){}
 
 
     public int getSold_Tickets_D() {

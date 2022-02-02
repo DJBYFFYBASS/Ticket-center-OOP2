@@ -10,7 +10,6 @@ public class Organizer implements Serializable {
 
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @JoinColumn(name = "Organizer_ID",nullable = false)
     private int Organizer_ID;
 

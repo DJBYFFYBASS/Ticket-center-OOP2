@@ -21,11 +21,11 @@
             <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="tfPassOrg" layoutX="237.0" layoutY="202.0">
+      <PasswordField fx:id="tfPassOrg" layoutX="237.0" layoutY="202.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
-      </TextField>
+      </PasswordField>
       <Button fx:id="OrganizerLoginButton" layoutX="264.0" layoutY="291.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Login">
          <font>
             <Font size="18.0" />
