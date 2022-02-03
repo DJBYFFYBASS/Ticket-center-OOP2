@@ -36,7 +36,7 @@ public class TicketFormController implements Initializable {
     @FXML
     private Button buttonSubmit;
     @FXML
-    private Button buttonDisQuery;
+    private Button btBack;
     @FXML
     private Label lbWarning;
 
@@ -57,10 +57,10 @@ public class TicketFormController implements Initializable {
             }
 
         });
-        buttonDisQuery.setOnAction(new EventHandler<ActionEvent>() {
+        btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                SceneUtls.DisQueryEntry(event,Constants.Distributor.DISTRIBUTOR_QUERY_VIEW,"Rating Form",disName);
+                SceneUtls.chooseScene(event,Constants.Distributor.DIS_OPTIONS,"Distributor options");
             }
         });
     }

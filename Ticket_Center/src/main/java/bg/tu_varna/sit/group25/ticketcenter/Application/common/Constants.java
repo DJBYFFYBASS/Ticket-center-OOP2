@@ -40,6 +40,7 @@ public class Constants
     {
         public static final String DISTRIBUTOR_LOGIN="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorLogin-view.fxml";
         public static final String DISTRIBUTOR_QUERY_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorQuery-view.fxml";
+        public static final String DIS_OPTIONS="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorOptions-view.fxml";
     }
 
     public static class TicketForm

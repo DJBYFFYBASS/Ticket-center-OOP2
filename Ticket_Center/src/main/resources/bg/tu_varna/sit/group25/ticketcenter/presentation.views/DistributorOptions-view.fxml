@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="250.0" prefWidth="193.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.DistributorOptionController">
+   <children>
+      <Button fx:id="btTForm" layoutX="55.0" layoutY="66.0" mnemonicParsing="false" text="Ticket Form" />
+      <Button fx:id="btQuery" layoutX="68.0" layoutY="126.0" mnemonicParsing="false" text="Query" />
+      <Button fx:id="btBack" layoutX="72.0" layoutY="175.0" mnemonicParsing="false" text="Back" />
+   </children>
+</AnchorPane>

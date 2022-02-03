@@ -11,47 +11,34 @@ import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class OrganizerOptionsController implements Initializable {
+public class DistributorOptionController implements Initializable {
     @FXML
-    private Button btView;
+    private Button btTForm;
     @FXML
-    private Button btUpdate;
-    @FXML
-    private Button btCreate;
+    private Button btQuery;
     @FXML
     private Button btBack;
 
-    public String OrgName;
+    public String DisName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btCreate.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-            SceneUtls.chooseScene(event,Constants.EventForm.EVENT_FORM_VIEW,"Event Form");
-            }
-        });
-        btUpdate.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-
-            }
-        });
-        btView.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-            SceneUtls.chooseScene(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event query");
-            }
-        });
         btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 SceneUtls.chooseScene(event, Constants.Login.LOGIN_VIEW,"Login");
             }
         });
-
-    }
-    public void SetOrgName(String name)
-    {
-        OrgName=name;
+        btTForm.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                SceneUtls.chooseScene(event,Constants.TicketForm.TICKET_FORM_VIEW,"Ticket form");
+            }
+        });
+        btQuery.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                SceneUtls.chooseScene(event,Constants.Distributor.DISTRIBUTOR_QUERY_VIEW,"Distributor query");
+            }
+        });
     }
 }
