@@ -29,7 +29,7 @@ public class AdminLoginCotroller implements Initializable {
             public void handle(ActionEvent event) {
                 if (tfPassAdmin.getText()!=""&&tfUserAdmin.getText()!="")
                 {
-                    SceneUtls.AdminLogin(event, Constants.Admin.OPTIONS,"Event Form",tfUserAdmin.getText(),tfPassAdmin.getText());
+                    SceneUtls.AdminLogin(event, Constants.Admin.OPTIONS,"Admin options",tfUserAdmin.getText(),tfPassAdmin.getText());
                 }
                 else {
                     lbAdminWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);

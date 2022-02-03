@@ -27,6 +27,8 @@ public class Constants
     {
         public static final String LOGIN_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/AdminLogin-view.fxml";
         public static final String OPTIONS="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/AdminOptions-view.fxml";
+        public static final String ORG_EVENTS="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/AdminOrgEvents-view.fxml";
+        public static final String DIS_EVENTS="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/AdminDisEvents-view.fxml";
     }
     public static class DBInfo
     {

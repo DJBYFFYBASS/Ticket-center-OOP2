@@ -28,16 +28,14 @@ public class LoginFormController  implements Initializable {
         OrganizerLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                SceneUtls.chooseScene(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
-                        "OrganizerLogin");
+                SceneUtls.chooseScene(actionEvent, Constants.Organizer.ORGANIZER_LOGIN, "OrganizerLogin");
             }
         });
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
 
-                    SceneUtls.chooseScene(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
-                            "DistributorLogin");
+                    SceneUtls.chooseScene(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN, "DistributorLogin");
 
             }
         });
