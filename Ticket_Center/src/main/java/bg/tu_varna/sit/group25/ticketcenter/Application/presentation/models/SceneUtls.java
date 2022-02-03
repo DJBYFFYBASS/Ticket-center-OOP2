@@ -146,8 +146,8 @@ public class SceneUtls {
                 try {
                     FXMLLoader loader = new FXMLLoader(SceneUtls.class.getResource(fxmlFile));
                     root = loader.load();
-                    TicketFormController ticketFormController=loader.getController();
-                    ticketFormController.SetDisName(username);
+                    //TicketFormController ticketFormController=loader.getController();
+                    //ticketFormController.SetDisName(username);
 
                 } catch (IOException e) {
                     e.printStackTrace();

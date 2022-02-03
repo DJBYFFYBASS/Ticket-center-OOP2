@@ -4,9 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.DistributorQueryController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.DistributorQueryController">
    <children>
       <ListView fx:id="lvDistributor" layoutX="53.0" layoutY="162.0" prefHeight="200.0" prefWidth="297.0" />
       <Label fx:id="lbDisQry" layoutX="44.0" layoutY="58.0" text="Distributor: ">
@@ -19,5 +17,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
+      <Button fx:id="btBack" layoutX="444.0" layoutY="92.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="btQuery" layoutX="440.0" layoutY="162.0" mnemonicParsing="false" text="Query" />
    </children>
 </AnchorPane>

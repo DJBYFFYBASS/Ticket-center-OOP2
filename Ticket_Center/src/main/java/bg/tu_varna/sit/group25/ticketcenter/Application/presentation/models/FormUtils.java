@@ -24,7 +24,7 @@ public class FormUtils {
     private static final String DATABASE_PASSWORD="Kyuubi279";
     private static final String INSERT_SHOW="INSERT INTO show (Show_ID,Show_Title,Show_Date,Location,MaxPlaces,Tickets,Show_Status_ID," +
             "Show_Type_ID,Organizer_ID,Distributor_ID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    private static final String INSERT_FORM="INSERT INTO form(Form_ID,Sold_Tickets,Price_Ticket,Distributor_ID"+
+    private static final String INSERT_FORM="INSERT INTO form(Sold_Tickets,Price_Ticket,Distributor_ID"+
             "Customer_Name,Show_Show_ID)";
     public static void TicketForm(String tfClientName,String tfClientPhonenumber,String tfTicketCount,String tfEvent, String tfTicketPrice)
     {//submit the related data to the DB in the correct places
@@ -33,9 +33,9 @@ public class FormUtils {
         {
             preparedStatement.setString(1,tfClientName);
             preparedStatement.setString(2,tfClientPhonenumber);
-            preparedStatement.setString(1,tfTicketCount);
-            preparedStatement.setString(1,tfEvent);
-            preparedStatement.setString(1,tfTicketPrice);
+            preparedStatement.setString(3,tfTicketCount);
+            preparedStatement.setString(4,tfEvent);
+            preparedStatement.setString(5,tfTicketPrice);
 
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
