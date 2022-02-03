@@ -1,7 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LoginUtls;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -30,7 +30,7 @@ public class OrganizerLoginController implements Initializable {
             public void handle(ActionEvent event) {
                 if (tfPassOrg.getText()!=""&&tfUserOrg.getText()!="")
                 {
-                    LoginUtls.OrgLogin(event,Constants.EventForm.EVENT_FORM_VIEW,"Event Form",tfUserOrg.getText(),tfPassOrg.getText());
+                    SceneUtls.OrgLogin(event,Constants.Organizer.Org_Options,"Event Form",tfUserOrg.getText(),tfPassOrg.getText());
                 }
                 else {
                     lbOrgWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);

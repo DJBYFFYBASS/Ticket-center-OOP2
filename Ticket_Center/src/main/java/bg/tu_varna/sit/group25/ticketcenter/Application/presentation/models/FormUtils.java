@@ -29,7 +29,7 @@ public class FormUtils {
     public static void TicketForm(String tfClientName,String tfClientPhonenumber,String tfTicketCount,String tfEvent, String tfTicketPrice)
     {//submit the related data to the DB in the correct places
         try(Connection connection=DriverManager.getConnection(DATABASE_URL,DATABASE_USERNAME,DATABASE_PASSWORD);
-        PreparedStatement preparedStatement=connection.preparedStatement(INSERT_FORM))
+        PreparedStatement preparedStatement=connection.prepareStatement(INSERT_FORM))
         {
             preparedStatement.setString(1,tfClientName);
             preparedStatement.setString(2,tfClientPhonenumber);

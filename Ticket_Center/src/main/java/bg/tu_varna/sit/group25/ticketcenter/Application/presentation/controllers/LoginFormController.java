@@ -1,12 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
-import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.OrganizerService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.OrganizerRepository;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LoginUtls;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,23 +20,31 @@ public class LoginFormController  implements Initializable {
     private Button OrganizerLoginButton;
     @FXML
     private Button DistributorLoginButton;
+    @FXML
+    private Button btAdmin;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         OrganizerLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                LoginUtls.chooseLogin(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
-                        "OrganizerLogin", null, null);
+                SceneUtls.chooseScene(actionEvent, Constants.Organizer.ORGANIZER_LOGIN,
+                        "OrganizerLogin");
             }
         });
         DistributorLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
 
-                    LoginUtls.chooseLogin(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
-                            "DistributorLogin", null, null);
+                    SceneUtls.chooseScene(actionEvent, Constants.Distributor.DISTRIBUTOR_LOGIN,
+                            "DistributorLogin");
 
+            }
+        });
+        btAdmin.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                SceneUtls.chooseScene(actionEvent,Constants.Admin.LOGIN_VIEW,"Admin Login");
             }
         });
 

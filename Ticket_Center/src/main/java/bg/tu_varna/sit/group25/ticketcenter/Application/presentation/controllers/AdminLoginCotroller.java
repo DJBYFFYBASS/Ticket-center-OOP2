@@ -1,39 +1,40 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DistributorRateingController implements Initializable {
+public class AdminLoginCotroller implements Initializable {
     @FXML
-    private Button buttonSubmmitRating;
+    private Button btAdminLogin;
     @FXML
-    private TextField tfRateing;
-
-    private String disName;
+    private TextField tfUserAdmin;
+    @FXML
+    private TextField tfPassAdmin;
+    @FXML
+    private Label lbAdminWarning;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        buttonSubmmitRating.setOnAction(new EventHandler<ActionEvent>() {
+        btAdminLogin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (tfRateing.getText()!="") {
-                    FormUtils.DisRateing(tfRateing.getText(),disName);
+                if (tfPassAdmin.getText()!=""&&tfUserAdmin.getText()!="")
+                {
+                    SceneUtls.AdminLogin(event, Constants.Admin.OPTIONS,"Event Form",tfUserAdmin.getText(),tfPassAdmin.getText());
                 }
-                SceneUtls.chooseScene(event, Constants.Login.LOGIN_VIEW,"Login");
+                else {
+                    lbAdminWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
+                }
             }
         });
-    }
-    public void GetInfo(String name)
-    {
-        disName=name;
     }
 }

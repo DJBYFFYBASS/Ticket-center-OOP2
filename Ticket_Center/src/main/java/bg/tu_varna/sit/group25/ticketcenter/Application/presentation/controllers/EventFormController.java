@@ -1,35 +1,20 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
-import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.CustomerService;
 //import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
-import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Form;
 // bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.LoginUtls;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+        import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
+        import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.w3c.dom.events.MouseEvent;
 
-import java.net.URL;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.*;
+        import java.net.URL;
+        import java.util.*;
 
 public class EventFormController implements Initializable {
 
@@ -101,7 +86,7 @@ public class EventFormController implements Initializable {
             public void handle(ActionEvent event) {
                 if (true)
                 {
-                    LoginUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
+                    SceneUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
                 }
                 else
                 {
@@ -112,7 +97,7 @@ public class EventFormController implements Initializable {
         buttonLoginReturn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                LoginUtls.chooseLogin(event,Constants.Login.LOGIN_VIEW,"Login choice",null,null);
+                SceneUtls.chooseScene(event,Constants.Login.LOGIN_VIEW,"Login choice");
             }
         });
     }

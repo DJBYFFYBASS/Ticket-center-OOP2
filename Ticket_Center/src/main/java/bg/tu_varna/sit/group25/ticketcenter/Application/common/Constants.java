@@ -20,8 +20,20 @@ public class Constants
     public static class Organizer
     {
         public static final String ORGANIZER_LOGIN="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/OrganizerLogin-view.fxml";
+        public static final String Org_Options="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/OrganizerOptions-view.fxml";
     }
 
+    public static class Admin
+    {
+        public static final String LOGIN_VIEW="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/AdminLogin-view.fxml";
+        public static final String OPTIONS="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/AdminOptions-view.fxml";
+    }
+    public static class DBInfo
+    {
+        public static final String DATABASE_URL="jdbc:mysql://127.0.0.1:3306/TicketCenter";
+        public static final String DATABASE_USERNAME="root";
+        public static final String DATABASE_PASSWORD="Kyuubi279";
+    }
     public static class Distributor
     {
         public static final String DISTRIBUTOR_LOGIN="/bg/tu_varna/sit/group25/ticketcenter/presentation.views/DistributorLogin-view.fxml";

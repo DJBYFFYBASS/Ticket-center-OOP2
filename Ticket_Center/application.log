@@ -69,3 +69,5 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection  -Initial SessionFactory created failorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -Unknown database 'ticketcenter'
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection  -Initial SessionFactory created failorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]

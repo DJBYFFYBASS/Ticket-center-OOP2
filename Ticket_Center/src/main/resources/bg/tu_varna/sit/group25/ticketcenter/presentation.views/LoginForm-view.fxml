@@ -4,10 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/11.0.2"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.LoginFormController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.LoginFormController">
    <children>
       <Button fx:id="OrganizerLoginButton" layoutX="98.0" layoutY="246.0" mnemonicParsing="false" text="OrganizerLogin">
          <font>
@@ -17,9 +14,14 @@
          <font>
             <Font name="Arial" size="18.0" />
          </font></Button></children>
-      <Label layoutX="220.0" layoutY="170.0" text="Choose login type">
+      <Label layoutX="219.0" layoutY="97.0" text="Choose login type">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+   <Button fx:id="btAdmin" layoutX="213.0" layoutY="152.0" mnemonicParsing="false" text="Administrator login">
+      <font>
+         <Font name="Arial" size="18.0" />
+      </font>
+   </Button>
    </AnchorPane>
