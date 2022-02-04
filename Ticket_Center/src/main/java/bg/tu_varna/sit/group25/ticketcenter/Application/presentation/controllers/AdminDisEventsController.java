@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.DistributorService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
@@ -19,6 +20,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class AdminDisEventsController implements Initializable, EventHandler <MouseEvent> {
+
+    private final DistributorService service=DistributorService.getInstance();
     @FXML
     private TextField tbDisName;
     @FXML
@@ -50,7 +53,6 @@ public class AdminDisEventsController implements Initializable, EventHandler <Mo
     @FXML
     private void initialize(){btFind.setOnMouseClicked(this::handle);}
 
-    private final ShowService service=ShowService.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -66,6 +68,7 @@ public class AdminDisEventsController implements Initializable, EventHandler <Mo
 
     @Override
     public void handle(MouseEvent mouseEvent) {
-        ObservableList<DistributorListViewModel>showsDistributorListViewModel=service.getAllShows();
+        ObservableList<DistributorListViewModel>showsDistributorListViewModel=service.getAllDistributor();
+        lvAdminDis.setItems(showsDistributorListViewModel);
     }
 }
