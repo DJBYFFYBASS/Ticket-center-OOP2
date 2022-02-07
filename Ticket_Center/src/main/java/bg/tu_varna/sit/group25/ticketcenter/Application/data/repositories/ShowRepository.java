@@ -6,6 +6,8 @@ import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 
 import java.net.PortUnreachableException;
 import java.util.LinkedList;
@@ -86,21 +88,23 @@ public class ShowRepository implements DAORepository<Show>
     public List<Show> getAll()
     {
         Session session1=Connection.openSession();
-        Transaction transaction= session1.beginTransaction();
+//        Transaction transaction= session1.beginTransaction();
         List<Show> shows=new LinkedList<>();
         try
         {
-            String jpql = "SELECT s FROM Show s ";
-            shows.addAll(session1.createQuery(jpql, Show.class).getResultList());
+            String jpql = "FROM Show";
+            //String jpql = "FROM Show ";
+            Query<Show> query = session1.createQuery(jpql, Show.class);
+            shows.addAll(query.list());
             log.info("get all customers");
         }
         catch (Exception ex)
         {
-            log.error("Get Customer error: "+ex.getMessage());
+            log.error(ex.getMessage());
         }
         finally
         {
-            transaction.commit();
+//            transaction.commit();
         }
         return shows;
     }

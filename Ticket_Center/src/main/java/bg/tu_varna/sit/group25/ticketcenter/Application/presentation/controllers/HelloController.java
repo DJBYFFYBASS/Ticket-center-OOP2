@@ -4,7 +4,6 @@ import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.*;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;

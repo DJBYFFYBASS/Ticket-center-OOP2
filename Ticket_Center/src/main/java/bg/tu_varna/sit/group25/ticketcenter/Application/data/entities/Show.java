@@ -5,29 +5,29 @@ import java.util.GregorianCalendar;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "show")
+@Table(name = "`show`")
 public class Show {
     private static final long serialVersionUID=1L;
-
+    private static final String sName="`show`";
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "Show_ID",table = "show")
+    @Column(name = "Show_ID")
     private  int Show_ID;
 
-    @Column(name = "Show_Title",table ="show")
+    @Column(name = "Show_Title")
     private String Show_Title;
 
-    @Column(name = "Show_Date",table = "show")
+    @Column(name = "Show_Date")
     private GregorianCalendar Show_Date;
 
-    @Column(name = "Location",table = "show")
+    @Column(name = "Location")
     private String Location;
 
-    @Column(name = "MaxPlaces",table = "show")
+    @Column(name = "MaxPlaces")
     private int MaxPlaces;
 
-    @Column(name = "Tickets",table = "show")
+    @Column(name = "Tickets")
     private int Tickets;
 
     @ManyToOne

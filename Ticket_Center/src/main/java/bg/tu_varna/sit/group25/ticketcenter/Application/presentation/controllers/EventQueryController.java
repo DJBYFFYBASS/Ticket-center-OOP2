@@ -1,9 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormListViewModel;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

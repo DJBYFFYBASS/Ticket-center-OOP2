@@ -1,7 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.FormUtils;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -50,7 +50,7 @@ public class TicketFormController implements Initializable {
                 if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != ""&&tfTicketPrice.getText()!="") {
                     FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText(),tfTicketPrice.getText());
 
-                    SceneUtls.DisRateing(event,Constants.RateingForm.RATING_FORM_VIEW,"Rating Form",disName);
+                    SceneUtls.DisRateing(event,Constants.RateingForm.RATING_FORM_VIEW,"Rateing Form",disName);
                 } else {
                     lbWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
                 }

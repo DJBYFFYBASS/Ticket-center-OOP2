@@ -27,8 +27,8 @@ public class Admin implements Serializable {
     public String toString() {
         return "Admin{" +
                 "Admin_ID=" + Admin_ID +
-                ", Name='" + Admin_Name +
-                ", Password=" + Admin_Pass +
+                ", Name='" + Admin_Name +"\'"+
+                ", Password='" + Admin_Pass +"\'"+
                 '}';
     }
 }

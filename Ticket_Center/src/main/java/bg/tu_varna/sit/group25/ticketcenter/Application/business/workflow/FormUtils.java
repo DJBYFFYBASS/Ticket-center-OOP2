@@ -1,15 +1,4 @@
-package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
-
-import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.CustomerService;
-import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Form;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.CustomerRepository;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
+package bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -31,11 +20,11 @@ public class FormUtils {
         try(Connection connection=DriverManager.getConnection(DATABASE_URL,DATABASE_USERNAME,DATABASE_PASSWORD);
         PreparedStatement preparedStatement=connection.prepareStatement(INSERT_FORM))
         {
-            preparedStatement.setString(1,tfClientName);
-            preparedStatement.setString(2,tfClientPhonenumber);
-            preparedStatement.setString(3,tfTicketCount);
-            preparedStatement.setString(4,tfEvent);
-            preparedStatement.setString(5,tfTicketPrice);
+            preparedStatement.setString(1,tfTicketCount);
+            preparedStatement.setString(2,tfTicketPrice);
+            preparedStatement.setString(3,tfClientPhonenumber);
+            preparedStatement.setString(4,tfClientName);
+            preparedStatement.setString(5,tfEvent);
 
             System.out.println(preparedStatement);
             preparedStatement.executeUpdate();

@@ -1,7 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormUtils;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.FormUtils;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

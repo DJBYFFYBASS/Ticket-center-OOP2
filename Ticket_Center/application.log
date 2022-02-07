@@ -73,3 +73,290 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection  -Initial SessionFactory created failorg.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 [JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:10: expecting IDENT, found '*'
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:10: expecting IDENT, found '*'
+line 1:10: expecting IDENT, found '*'
+	at antlr.Parser.match(Parser.java:211)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.identifier(HqlBaseParser.java:1622)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.atom(HqlBaseParser.java:3958)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.unaryExpression(HqlBaseParser.java:3877)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.multiplyExpression(HqlBaseParser.java:3754)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.additiveExpression(HqlBaseParser.java:3381)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.concatenation(HqlBaseParser.java:682)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.relationalExpression(HqlBaseParser.java:2987)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.equalityExpression(HqlBaseParser.java:2815)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.negatedExpression(HqlBaseParser.java:2774)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.logicalAndExpression(HqlBaseParser.java:2685)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.logicalOrExpression(HqlBaseParser.java:2645)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.expression(HqlBaseParser.java:2323)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.aliasedExpression(HqlBaseParser.java:2594)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectedPropertiesList(HqlBaseParser.java:1517)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1417)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1142)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:825)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:336)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:200)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:294)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:622)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:734)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:834)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository.getAll(ShowRepository.java:96)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService.getAllShows(ShowService.java:108)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.HelloController.handle(HelloController.java:43)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3563)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3865)
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1851)
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2584)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:412)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:556)
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:942)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.hql.internal.ast.QuerySyntaxException: expecting IDENT, found '*' near line 1, column 10 [SELECT s.* FROM bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show s ]
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:8: unexpected token: *
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:8: unexpected token: *
+line 1:8: unexpected token: *
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1380)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1142)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:825)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:336)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:200)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:294)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:622)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:734)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:834)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository.getAll(ShowRepository.java:96)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService.getAllShows(ShowService.java:108)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.HelloController.handle(HelloController.java:43)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3563)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3865)
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1851)
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2584)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:412)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:556)
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:942)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: * near line 1, column 8 [SELECT * FROM bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show  ]
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:10: expecting IDENT, found '*'
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:10: expecting IDENT, found '*'
+line 1:10: expecting IDENT, found '*'
+	at antlr.Parser.match(Parser.java:211)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.identifier(HqlBaseParser.java:1622)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.atom(HqlBaseParser.java:3958)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.unaryExpression(HqlBaseParser.java:3877)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.multiplyExpression(HqlBaseParser.java:3754)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.additiveExpression(HqlBaseParser.java:3381)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.concatenation(HqlBaseParser.java:682)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.relationalExpression(HqlBaseParser.java:2987)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.equalityExpression(HqlBaseParser.java:2815)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.negatedExpression(HqlBaseParser.java:2774)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.logicalAndExpression(HqlBaseParser.java:2685)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.logicalOrExpression(HqlBaseParser.java:2645)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.expression(HqlBaseParser.java:2323)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.aliasedExpression(HqlBaseParser.java:2594)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectedPropertiesList(HqlBaseParser.java:1517)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1417)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1142)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:825)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:336)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:200)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:294)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:622)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:734)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:834)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository.getAll(ShowRepository.java:96)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService.getAllShows(ShowService.java:108)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.HelloController.handle(HelloController.java:43)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3563)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3865)
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1851)
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2584)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:412)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:556)
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:942)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.hql.internal.ast.QuerySyntaxException: expecting IDENT, found '*' near line 1, column 10 [SELECT s.* FROM bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show s ]
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:10: expecting IDENT, found '*'
+[JavaFX Application Thread] ERROR org.hibernate.hql.internal.ast.ErrorTracker  -line 1:10: expecting IDENT, found '*'
+line 1:10: expecting IDENT, found '*'
+	at antlr.Parser.match(Parser.java:211)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.identifier(HqlBaseParser.java:1622)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.atom(HqlBaseParser.java:3958)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.unaryExpression(HqlBaseParser.java:3877)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.multiplyExpression(HqlBaseParser.java:3754)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.additiveExpression(HqlBaseParser.java:3381)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.concatenation(HqlBaseParser.java:682)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.relationalExpression(HqlBaseParser.java:2987)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.equalityExpression(HqlBaseParser.java:2815)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.negatedExpression(HqlBaseParser.java:2774)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.logicalAndExpression(HqlBaseParser.java:2685)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.logicalOrExpression(HqlBaseParser.java:2645)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.expression(HqlBaseParser.java:2323)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.aliasedExpression(HqlBaseParser.java:2594)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectedPropertiesList(HqlBaseParser.java:1517)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectClause(HqlBaseParser.java:1417)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectFrom(HqlBaseParser.java:1142)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.queryRule(HqlBaseParser.java:825)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.selectStatement(HqlBaseParser.java:336)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:200)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:294)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:113)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:622)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:734)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:834)
+	at org.hibernate.orm.core@5.6.1.Final/org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository.getAll(ShowRepository.java:96)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService.getAllShows(ShowService.java:108)
+	at bg.tu_varna.sit.group25.ticketcenter/bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.HelloController.handle(HelloController.java:43)
+	at javafx.base/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics/javafx.scene.Scene$ClickGenerator.postProcess(Scene.java:3563)
+	at javafx.graphics/javafx.scene.Scene$MouseHandler.process(Scene.java:3865)
+	at javafx.graphics/javafx.scene.Scene.processMouseEvent(Scene.java:1851)
+	at javafx.graphics/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2584)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:409)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:299)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:447)
+	at javafx.graphics/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:412)
+	at javafx.graphics/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:446)
+	at javafx.graphics/com.sun.glass.ui.View.handleMouseEvent(View.java:556)
+	at javafx.graphics/com.sun.glass.ui.View.notifyMouse(View.java:942)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:174)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.hql.internal.ast.QuerySyntaxException: expecting IDENT, found '*' near line 1, column 10 [SELECT s.* FROM bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show s ]
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Show s' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Show' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.hql.internal.ast.QuerySyntaxException: ticketcenter.show is not mapped [FROM ticketcenter.show]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.hql.internal.ast.QuerySyntaxException: show is not mapped [FROM show]
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.hql.internal.ast.QuerySyntaxException: show is not mapped [FROM show]
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show show0_' at line 1
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"

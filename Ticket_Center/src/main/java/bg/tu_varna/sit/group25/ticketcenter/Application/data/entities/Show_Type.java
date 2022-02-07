@@ -15,7 +15,7 @@ public class Show_Type implements Serializable {
     private int Show_Type_ID;
 
     @Column(name="Type",nullable = false)
-    private int Type;
+    private String Type;
 
     @OneToMany(mappedBy = "show_type")
     private Set<Show> showSet;
@@ -28,11 +28,11 @@ public class Show_Type implements Serializable {
         Show_Type_ID = show_Type_ID;
     }
 
-    public int getType() {
+    public String getType() {
         return Type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         Type = type;
     }
 

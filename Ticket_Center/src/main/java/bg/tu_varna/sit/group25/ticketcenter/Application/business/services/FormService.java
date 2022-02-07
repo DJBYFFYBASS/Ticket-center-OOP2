@@ -1,10 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.business.services;
 
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Form;
-import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.CustomerRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.CustomerListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormListViewModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

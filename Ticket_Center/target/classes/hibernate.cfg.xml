@@ -25,5 +25,6 @@
         <mapping class="bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show"/>
         <mapping class="bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show_Status"/>
         <mapping class="bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show_Type"/>
+        <mapping class="bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Admin"/>
     </session-factory>
 </hibernate-configuration>

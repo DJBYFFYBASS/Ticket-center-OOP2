@@ -3,7 +3,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name="Form")
+@Table(name="`form`")
 @Entity
 public class Form {
 

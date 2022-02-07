@@ -1,7 +1,6 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.DistributorService;
-import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
@@ -16,7 +15,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class AdminDisEventsController implements Initializable, EventHandler <MouseEvent> {
