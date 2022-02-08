@@ -92,7 +92,7 @@ public class ShowRepository implements DAORepository<Show>
         List<Show> shows=new LinkedList<>();
         try
         {
-            String jpql = "FROM Show";
+            String jpql = "SELECT s FROM Show s";
             //String jpql = "FROM Show ";
             Query<Show> query = session1.createQuery(jpql, Show.class);
             shows.addAll(query.list());
