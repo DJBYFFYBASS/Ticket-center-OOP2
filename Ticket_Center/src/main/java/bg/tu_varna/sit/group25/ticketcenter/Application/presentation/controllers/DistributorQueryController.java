@@ -2,9 +2,11 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controller
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.FormUtils;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -31,7 +33,8 @@ public class DistributorQueryController implements Initializable {
     private String disName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        ObservableList<FormListViewModel> showsDistributorListViewModel=service.getAllForms();
+        lvDistributor.setItems(showsDistributorListViewModel);
         btQuery.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

@@ -1,7 +1,11 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.OrganizerService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.OrganizerListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -14,6 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminOrgEventsController implements Initializable {
+    private final OrganizerService service=OrganizerService.getInstance();
     @FXML
     private TextField tbOrgName;
     @FXML
@@ -35,13 +40,21 @@ public class AdminOrgEventsController implements Initializable {
     @FXML
     private Button btBack;
     @FXML
-    private ListView lvAdminOrg;
+    private ListView<OrganizerListViewModel> lvAdminOrg;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<OrganizerListViewModel> showsListViewModels=service.getAllOrganizers();
+        lvAdminOrg.setItems(showsListViewModels);
         btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 SceneUtls.chooseScene(event, Constants.Admin.OPTIONS,"Event Form");
+            }
+        });
+        btFind.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
             }
         });
     }

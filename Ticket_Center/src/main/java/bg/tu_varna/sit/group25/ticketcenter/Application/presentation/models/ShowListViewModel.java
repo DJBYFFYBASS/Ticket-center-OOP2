@@ -16,11 +16,11 @@ public class ShowListViewModel
     public int max;
     public int tickets;
     public long status;
-    public long s_type;
+    public String s_type;
     public long organizer;
     public long distributor;
 
-    public ShowListViewModel(int s_id, String title, GregorianCalendar date, String location, int max, int tickets, int status, int s_type, int organizer, long distributor) {
+    public ShowListViewModel(int s_id, String title, GregorianCalendar date, String location, int max, int tickets, int status, String s_type, int organizer, long distributor) {
         this.s_id = s_id;
         this.title = title;
         this.date = date;

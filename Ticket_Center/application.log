@@ -360,3 +360,9 @@ line 1:10: expecting IDENT, found '*'
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
 [JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository  -Get Customer error: For input string: "Concert"
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -Cannot determine value type from string 'nido'
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.OrganizerRepository  -Get Customer error: org.hibernate.exception.DataException: could not execute query
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -Cannot determine value type from string 'nido'
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.OrganizerRepository  -Get Customer error: org.hibernate.exception.DataException: could not execute query
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  -Cannot determine value type from string 'nido'
+[JavaFX Application Thread] ERROR bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.OrganizerRepository  -Get Customer error: org.hibernate.exception.DataException: could not execute query

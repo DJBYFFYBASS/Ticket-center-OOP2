@@ -86,7 +86,7 @@ public class EventFormController implements Initializable {
             public void handle(ActionEvent event) {
                 if (true)
                 {
-                    SceneUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
+                    //SceneUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
                 }
                 else
                 {

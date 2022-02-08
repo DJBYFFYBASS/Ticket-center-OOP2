@@ -18,7 +18,8 @@ public class DistributorRateingController implements Initializable {
     private Button buttonSubmmitRating;
     @FXML
     private TextField tfRateing;
-
+    @FXML
+    private Button btSkip;
     private String disName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -29,6 +30,12 @@ public class DistributorRateingController implements Initializable {
                     FormUtils.DisRateing(tfRateing.getText(),disName);
                 }
                 SceneUtls.chooseScene(event, Constants.Login.LOGIN_VIEW,"Login");
+            }
+        });
+        btSkip.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                SceneUtls.chooseScene(event,Constants.Distributor.DIS_OPTIONS,"Distributor options");
             }
         });
     }

@@ -17,7 +17,7 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AdminDisEventsController implements Initializable, EventHandler <MouseEvent> {
+public class AdminDisEventsController implements Initializable{
 
     private final DistributorService service=DistributorService.getInstance();
     @FXML
@@ -49,13 +49,13 @@ public class AdminDisEventsController implements Initializable, EventHandler <Mo
     @FXML
     private ListView<DistributorListViewModel> lvAdminDis;
     @FXML
-    private void initialize(){btFind.setOnMouseClicked(this::handle);}
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-
+        ObservableList<DistributorListViewModel>showsDistributorListViewModel=service.getAllDistributor();
+        lvAdminDis.setItems(showsDistributorListViewModel);
         btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -64,9 +64,5 @@ public class AdminDisEventsController implements Initializable, EventHandler <Mo
         });
     }
 
-    @Override
-    public void handle(MouseEvent mouseEvent) {
-        ObservableList<DistributorListViewModel>showsDistributorListViewModel=service.getAllDistributor();
-        lvAdminDis.setItems(showsDistributorListViewModel);
-    }
+
 }
