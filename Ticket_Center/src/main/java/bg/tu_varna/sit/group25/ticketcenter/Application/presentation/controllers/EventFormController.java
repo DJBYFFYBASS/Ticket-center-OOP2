@@ -14,11 +14,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
         import java.net.URL;
-        import java.util.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class EventFormController implements Initializable {
 
     //private final ShowService service=ShowService.getInstance();
+
+
 
     @FXML
     private TextField tfEventLocation;
@@ -36,6 +39,8 @@ public class EventFormController implements Initializable {
     private TextField tfEventTicketLimit;
     @FXML
     private TextField tfEventID;
+    //organizer
+    //distributor
     @FXML
     private Label lbEventFormWarning;
     @FXML
@@ -55,8 +60,15 @@ public class EventFormController implements Initializable {
                 if (tfEventLocation.getText()!=""&&tfEventType.getText()!=""&&tfEventType.getText()!=""&&tfEventStatus.getText()!=""&&tfEventDate.getText()!=""
                         &&tfEventTickets.getText()!=""&&tfEventTicketLimit.getText()!=""&&tfEventID.getText()!="")
                 {
-                    //FormUtils.EventFormCreate(tfEventLocation.getText(),Integer.parseInt(tfEventType.getText()),tfEventName.getText(), Integer.parseInt(tfEventStatus.getText()), tfEventDate.getText(),
-                        //    Integer.parseInt(tfEventTickets.getText()), Integer.parseInt(tfEventTicketLimit.getText()),Integer.parseInt(tfEventID.getText()));
+                    FormUtils.EventFormCreate(
+                    tfEventID.getText());
+                    tfEventName.getText();
+                    tfEventDate.getText();
+                    tfEventLocation.getText();
+                    tfEventTickets.getText();
+                    tfEventTickets.getText();
+                    tfEventStatus.getText();
+                    tfEventType.getText();
                 }
                 else
                 {
