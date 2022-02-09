@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 @Entity
-@Table(name="organizer")
+@Table(name="`organizer`")
 public class Organizer implements Serializable {
     private static final long serialVersionUID=1L;
 

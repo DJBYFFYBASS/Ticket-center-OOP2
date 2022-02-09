@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
 
 public class ShowListViewModel
 {
-    public int s_id;
+    public int show_id;
     public String title;
     public GregorianCalendar date;
     public String location;
@@ -21,7 +21,7 @@ public class ShowListViewModel
     public int distributor;
 
     public ShowListViewModel(int s_id, String title, GregorianCalendar date, String location, int max, int tickets, int status, String s_type, int organizer, int distributor) {
-        this.s_id = s_id;
+        this.show_id = s_id;
         this.title = title;
         this.date = date;
         this.location = location;
@@ -36,9 +36,9 @@ public class ShowListViewModel
     public ShowListViewModel(int show_id, String show_title, GregorianCalendar show_date, String location, int maxPlaces, int tickets, Show_Status show_status, Show_Type show_type, Organizer organizer, Distributor distributor) {
     }
 
+
     public String toString()
     {
-
-        return String.format(" %d | %s | %s | %s | %d | %s | %d | %s | %d | %d ",s_id,title,date,location,max,title,status,s_type,organizer,distributor);
+        return String.format(" %d | %s | %s | %s | %d | %s | %d | %s | %d | %d ", show_id,title,date,location,max,title,status,s_type,organizer,distributor);
     }
 }

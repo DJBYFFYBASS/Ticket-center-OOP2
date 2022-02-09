@@ -41,7 +41,7 @@ public class FormUtils {
             "Customer_Name,Show_Show_ID)";
  */
     public static void TicketForm(String tfClientName,String tfClientPhonenumber,String tfTicketCount,String tfEvent, String tfTicketPrice)
-    {//submit the related data to the DB in the correct places
+    {}//submit the related data to the DB in the correct places
         /*try(Connection connection=DriverManager.getConnection(DATABASE_URL,DATABASE_USERNAME,DATABASE_PASSWORD);
         PreparedStatement preparedStatement=connection.prepareStatement(INSERT_FORM))
         {
@@ -59,9 +59,9 @@ public class FormUtils {
             printSQLException(e);
         }
 
-         */
+
     }
-/*
+
     public static void  printSQLException(SQLException ex)
     {
         for(Throwable e:ex)
@@ -81,10 +81,10 @@ public class FormUtils {
             }
         }
     }
-
+*/
     public static void EventFormCreate(String Show_Title,String Show_Date,String Location,String MaxPlaces,String Tickets,String Show_Status_ID,String Show_Type_ID,String Distributor)
     {//make DB connection and insert data
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+       /* SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 
         int count=0;
         Show show;
@@ -130,6 +130,8 @@ public class FormUtils {
                 session.close();
             }
         }
+        */
+
     }
 
     public static void EventFormUpdate(String text, String Location, String Type, String Name, String Status, String Date, String Tickets, String Ticket_limit)

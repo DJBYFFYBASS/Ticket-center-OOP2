@@ -1,10 +1,10 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.OrganizerService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.AdminOrgWF;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.OrganizerListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
-import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -51,10 +51,20 @@ public class AdminOrgEventsController implements Initializable {
                 SceneUtls.chooseScene(event, Constants.Admin.OPTIONS,"Event Form");
             }
         });
+        btAdd.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (tbOrgName.getText()!=""&&tbOrgPN.getText()!=""&&tbOrgUser.getText()!=""&&tbOrgPass.getText()!=""&&tbOrgFee.getText()!="")
+                {
+                    AdminOrgWF.Add(tbOrgName.getText(),tbOrgPN.getText(),tbOrgUser.getText(),tbOrgPass.getText(),tbOrgFee.getText());
+                }
+            }
+        });
         btFind.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                ObservableList<OrganizerListViewModel> showsListViewModels=service.getAllOrganizers();
+                lvAdminOrg.setItems(showsListViewModels);
             }
         });
     }
