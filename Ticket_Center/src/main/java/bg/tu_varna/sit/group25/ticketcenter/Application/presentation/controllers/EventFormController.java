@@ -37,13 +37,15 @@ public class EventFormController implements Initializable {
     @FXML
     private TextField tfEventID;
     @FXML
+    private TextField tfDis;
+    @FXML
     private Label lbEventFormWarning;
     @FXML
     private Button buttonCreate;
     @FXML
     private Button buttonUpdate;
     @FXML
-    private Button buttonQuery;
+    private Button btBack;
     @FXML
     private Button buttonLoginReturn;
     @Override
@@ -53,10 +55,10 @@ public class EventFormController implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 if (tfEventLocation.getText()!=""&&tfEventType.getText()!=""&&tfEventType.getText()!=""&&tfEventStatus.getText()!=""&&tfEventDate.getText()!=""
-                        &&tfEventTickets.getText()!=""&&tfEventTicketLimit.getText()!=""&&tfEventID.getText()!="")
+                        &&tfEventTickets.getText()!=""&&tfEventTicketLimit.getText()!=""&&tfDis.getText()!="")
                 {
                     FormUtils.EventFormCreate(tfEventLocation.getText(),tfEventType.getText(),tfEventName.getText(), tfEventStatus.getText(),
-                            tfEventDate.getText(), tfEventTickets.getText(), tfEventTicketLimit.getText());
+                            tfEventDate.getText(), tfEventTickets.getText(), tfEventTicketLimit.getText(),tfDis.getText());
                 }
                 else
                 {
@@ -81,17 +83,10 @@ public class EventFormController implements Initializable {
                 }
             }
         });
-        buttonQuery.setOnAction(new EventHandler<ActionEvent>() {
+        btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (true)
-                {
-                    //SceneUtls.EventQueryEntry(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event Query",tfEventName.getText());
-                }
-                else
-                {
-                    lbEventFormWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
-                }
+                SceneUtls.chooseScene(event,Constants.Organizer.Org_Options,"Organizer Options");
             }
         });
         buttonLoginReturn.setOnAction(new EventHandler<ActionEvent>() {

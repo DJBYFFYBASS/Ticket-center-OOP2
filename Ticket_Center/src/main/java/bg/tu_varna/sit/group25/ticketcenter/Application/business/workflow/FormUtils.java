@@ -56,7 +56,7 @@ public class FormUtils {
         }
     }
 
-    public static void EventFormCreate(String Show_Title,String Show_Date,String Location,String MaxPlaces,String Tickets,String Show_Status_ID,String Show_Type_ID)
+    public static void EventFormCreate(String Show_Title,String Show_Date,String Location,String MaxPlaces,String Tickets,String Show_Status_ID,String Show_Type_ID,String Distributor)
     {//make DB connection and insert data
 
 
