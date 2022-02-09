@@ -14,7 +14,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
         import java.net.URL;
-        import java.util.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class EventFormController implements Initializable {
 
@@ -36,6 +37,8 @@ public class EventFormController implements Initializable {
     private TextField tfEventTicketLimit;
     @FXML
     private TextField tfEventID;
+    //organizer
+    //distributor
     @FXML
     private TextField tfDis;
     @FXML

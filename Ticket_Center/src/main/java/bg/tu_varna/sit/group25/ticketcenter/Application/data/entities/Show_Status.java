@@ -10,7 +10,7 @@ public class Show_Status implements Serializable {
 
     @Id
     @JoinColumn(name="Show_Status_ID",nullable = false)
-    private long Show_Status_ID;
+    private int Show_Status_ID;
 
     @Column(name="Status",nullable = false)
     private String Status;
@@ -18,11 +18,11 @@ public class Show_Status implements Serializable {
     @OneToMany(mappedBy = "show_status")
     private Set<Show> showSet;
 
-    public long getShow_Status_ID() {
+    public int getShow_Status_ID() {
         return Show_Status_ID;
     }
 
-    public void setShow_Status_ID(long show_Status_ID) {
+    public void setShow_Status_ID(int show_Status_ID) {
         Show_Status_ID = show_Status_ID;
     }
 

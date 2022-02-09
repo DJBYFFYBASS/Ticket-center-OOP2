@@ -1,5 +1,4 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.entities;
-import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 
 import java.util.GregorianCalendar;
 import javax.persistence.*;
@@ -12,22 +11,22 @@ public class Show {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "Show_ID")
+    @Column(name = "Show_ID", nullable = false)
     private  int Show_ID;
 
-    @Column(name = "Show_Title")
+    @Column(name = "Show_Title", nullable = false)
     private String Show_Title;
 
-    @Column(name = "Show_Date")
+    @Column(name = "Show_Date", nullable = false)
     private GregorianCalendar Show_Date;
 
-    @Column(name = "Location")
+    @Column(name = "Location", nullable = false)
     private String Location;
 
-    @Column(name = "MaxPlaces")
+    @Column(name = "MaxPlaces", nullable = false)
     private int MaxPlaces;
 
-    @Column(name = "Tickets")
+    @Column(name = "Tickets", nullable = false)
     private int Tickets;
 
     @ManyToOne
