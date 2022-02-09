@@ -55,8 +55,8 @@ public class EventFormController implements Initializable {
                 if (tfEventLocation.getText()!=""&&tfEventType.getText()!=""&&tfEventType.getText()!=""&&tfEventStatus.getText()!=""&&tfEventDate.getText()!=""
                         &&tfEventTickets.getText()!=""&&tfEventTicketLimit.getText()!=""&&tfEventID.getText()!="")
                 {
-                    //FormUtils.EventFormCreate(tfEventLocation.getText(),Integer.parseInt(tfEventType.getText()),tfEventName.getText(), Integer.parseInt(tfEventStatus.getText()), tfEventDate.getText(),
-                        //    Integer.parseInt(tfEventTickets.getText()), Integer.parseInt(tfEventTicketLimit.getText()),Integer.parseInt(tfEventID.getText()));
+                    FormUtils.EventFormCreate(tfEventLocation.getText(),tfEventType.getText(),tfEventName.getText(), tfEventStatus.getText(),
+                            tfEventDate.getText(), tfEventTickets.getText(), tfEventTicketLimit.getText());
                 }
                 else
                 {

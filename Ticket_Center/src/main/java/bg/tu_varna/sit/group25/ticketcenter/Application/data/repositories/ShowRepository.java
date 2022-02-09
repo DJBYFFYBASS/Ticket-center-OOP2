@@ -88,7 +88,7 @@ public class ShowRepository implements DAORepository<Show>
     public List<Show> getAll()
     {
         Session session1=Connection.openSession();
-//        Transaction transaction= session1.beginTransaction();
+        Transaction transaction= session1.beginTransaction();
         List<Show> shows=new LinkedList<>();
         try
         {
@@ -104,7 +104,7 @@ public class ShowRepository implements DAORepository<Show>
         }
         finally
         {
-//            transaction.commit();
+            transaction.commit();
         }
         return shows;
     }

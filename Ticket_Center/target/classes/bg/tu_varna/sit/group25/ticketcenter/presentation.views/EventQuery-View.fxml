@@ -4,9 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.EventQueryController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.EventQueryController">
    <children>
       <Label fx:id="lbEvent" layoutX="41.0" layoutY="29.0" text="Event: ">
          <font>
@@ -19,5 +17,6 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Label>
+      <Button fx:id="btBack" layoutX="479.0" layoutY="76.0" mnemonicParsing="false" text="Back" />
    </children>
 </AnchorPane>

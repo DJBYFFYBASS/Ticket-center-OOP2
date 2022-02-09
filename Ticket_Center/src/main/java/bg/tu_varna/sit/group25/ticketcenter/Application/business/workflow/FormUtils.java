@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.GregorianCalendar;
 
 public class FormUtils {
 
@@ -57,13 +56,13 @@ public class FormUtils {
         }
     }
 
-    public static void EventFormCreate(int Show_ID,String Show_Title,GregorianCalendar Show_Date,String Location,int MaxPlaces,int Tickets,int Show_Status_ID,int Show_Type_ID,int Organizer_ID,int Distributor_ID)
+    public static void EventFormCreate(String Show_Title,String Show_Date,String Location,String MaxPlaces,String Tickets,String Show_Status_ID,String Show_Type_ID)
     {//make DB connection and insert data
 
 
     }
 
-    public static void EventFormUpdate(String Location,String Type,String Name,String Status,String Date,String Tickets,String Ticket_limit,String ID)
+    public static void EventFormUpdate(String text, String Location, String Type, String Name, String Status, String Date, String Tickets, String Ticket_limit)
     {//make DB connection and update data at specified ID
 
     }
