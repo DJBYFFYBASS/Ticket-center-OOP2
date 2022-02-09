@@ -30,6 +30,8 @@ public class AdminOrgEventsController implements Initializable {
     @FXML
     private TextField tbOrgFee;
     @FXML
+    private TextField tbOrgID;
+    @FXML
     private Button btAdd;
     @FXML
     private Button btUpdate;
@@ -57,6 +59,22 @@ public class AdminOrgEventsController implements Initializable {
                 if (tbOrgName.getText()!=""&&tbOrgPN.getText()!=""&&tbOrgUser.getText()!=""&&tbOrgPass.getText()!=""&&tbOrgFee.getText()!="")
                 {
                     AdminOrgWF.Add(tbOrgName.getText(),tbOrgPN.getText(),tbOrgUser.getText(),tbOrgPass.getText(),tbOrgFee.getText());
+                }
+            }
+        });
+        btUpdate.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (tbOrgID.getText()!="") {
+                    AdminOrgWF.Update(tbOrgName.getText(), tbOrgPN.getText(), tbOrgUser.getText(), tbOrgPass.getText(), tbOrgFee.getText(),tbOrgID.getText());
+                }
+            }
+        });
+        btDel.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (tbOrgID.getText()!="") {
+                    AdminOrgWF.Delete(tbOrgName.getText(), tbOrgPN.getText(), tbOrgUser.getText(), tbOrgPass.getText(), tbOrgFee.getText(),tbOrgID.getText());
                 }
             }
         });

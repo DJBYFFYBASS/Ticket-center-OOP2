@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="679.0" prefWidth="923.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.AdminOrgEventsController">
+<AnchorPane prefHeight="545.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.AdminOrgEventsController">
    <children>
-      <ListView fx:id="lvAdminOrg" layoutX="14.0" layoutY="14.0" prefHeight="292.0" prefWidth="898.0" />
+      <ListView fx:id="lvAdminOrg" layoutX="14.0" layoutY="14.0" prefHeight="292.0" prefWidth="573.0" />
       <TextField fx:id="tbOrgName" layoutX="14.0" layoutY="353.0" />
       <TextField fx:id="tbOrgPN" layoutX="14.0" layoutY="418.0" />
       <TextField fx:id="tbOrgFee" layoutX="14.0" layoutY="490.0" />
@@ -19,7 +19,9 @@
       <Button fx:id="btAdd" layoutX="424.0" layoutY="341.0" mnemonicParsing="false" text="Add" />
       <Button fx:id="btUpdate" layoutX="417.0" layoutY="380.0" mnemonicParsing="false" text="Update" />
       <Button fx:id="btDel" layoutX="419.0" layoutY="418.0" mnemonicParsing="false" text="Delete" />
-      <Button fx:id="btFind" layoutX="541.0" layoutY="341.0" mnemonicParsing="false" text="Find" />
-      <Button fx:id="btBack" layoutX="521.0" layoutY="406.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="btFind" layoutX="513.0" layoutY="430.0" mnemonicParsing="false" text="Find" />
+      <Button fx:id="btBack" layoutX="512.0" layoutY="495.0" mnemonicParsing="false" text="Back" />
+      <Label layoutX="519.0" layoutY="370.0" text="ID" />
+      <TextField fx:id="tbOrgID" layoutX="512.0" layoutY="397.0" prefHeight="25.0" prefWidth="41.0" />
    </children>
 </AnchorPane>
