@@ -20,24 +20,23 @@ public class ShowService {
 
     private static class  ShowServiceHolder {
         public static final ShowService INSTANCE =new ShowService();
-}
-
-
-public ObservableList<ShowListViewModel>getAllShows()
-{
-    List<Show> shows=repository.getAll();
-
-    return FXCollections.observableList(shows.stream().map(s -> new ShowListViewModel(
-            s.getShow_ID(),
-            s.getShow_Title(),
-            s.getShow_Date(),
-            s.getLocation(),
-            s.getMaxPlaces(),
-            s.getTickets(),
-            s.getShow_status(),
-            s.getShow_type(),
-            s.getOrganizer(),
-            s.getDistributor()
-    )).collect(Collectors.toList()));
-}
     }
+
+    public ObservableList<ShowListViewModel>getAllShows()
+    {
+        List<Show> shows=repository.getAll();
+
+        return FXCollections.observableList(shows.stream().map(s -> new ShowListViewModel(
+                s.getShow_ID(),
+                s.getShow_Title(),
+                s.getShow_Date(),
+                s.getLocation(),
+                s.getMaxPlaces(),
+                s.getTickets(),
+                s.getShow_status(),
+                s.getShow_type(),
+                s.getOrganizer(),
+                s.getDistributor()
+        )).collect(Collectors.toList()));
+    }
+}

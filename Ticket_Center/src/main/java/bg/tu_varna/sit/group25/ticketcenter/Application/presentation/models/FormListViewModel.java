@@ -8,11 +8,11 @@ public class FormListViewModel
 {
     private int sold;
     private double price;
-    private long distributor;
-    private int customer;
-    private int show;
+    private String distributor;
+    private String customer;
+    private String show;
 
-    public FormListViewModel(int sold, double price, long distributor, int customer, int show) {
+    public FormListViewModel(int sold, double price, String distributor, String customer, String show) {
         this.sold = sold;
         this.price = price;
         this.distributor = distributor;
@@ -21,13 +21,16 @@ public class FormListViewModel
     }
 
     public FormListViewModel(int sold_tickets, double price_ticket, Distributor distributor, Customer customer, Show show) {
+        this.sold=sold_tickets;
+        this.price=price_ticket;
+        this.distributor=distributor.getName_D();
+        this.customer=customer.getCustomer_Name();
+        this.show=show.getShow_Title();
     }
 
-    public FormListViewModel(long sold_tickets, double price_ticket, int distributor_id, Long customer_id, int show_id) {
-    }
 
     public String toString()
     {
-        return String.format(" %d | %f | %d | %d | %d |",sold,price,distributor,customer,show);
+        return String.format(" %s | %s | %d | %f | %s |",customer,show,sold,price,distributor);
     }
 }

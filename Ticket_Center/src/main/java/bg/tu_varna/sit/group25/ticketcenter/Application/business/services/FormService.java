@@ -27,11 +27,11 @@ public class FormService
         List<Form> forms=repository.getAll();
 
         return FXCollections.observableList(forms.stream().map(f->new FormListViewModel(
-                f.getSold_Tickets(),
+                (int) f.getSold_Tickets(),
                 f.getPrice_Ticket(),
-                f.getDistributor().getDistributor_ID(),
-                f.getCustomer().getCustomer_ID(),
-                f.getShow().getShow_ID()
+                f.getDistributor().getName_D(),
+                f.getCustomer().getCustomer_Name(),
+                f.getShow().getShow_Title()
         )).collect(Collectors.toList()));
     }
 }

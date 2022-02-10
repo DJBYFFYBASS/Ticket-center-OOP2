@@ -18,7 +18,7 @@ public class Show {
     private String Show_Title;
 
     @Column(name = "Show_Date", nullable = false)
-    private GregorianCalendar Show_Date;
+    private String Show_Date;
 
     @Column(name = "Location", nullable = false)
     private String Location;
@@ -61,11 +61,11 @@ public class Show {
         Show_Title = show_Title;
     }
 
-    public GregorianCalendar getShow_Date() {
+    public String getShow_Date() {
         return Show_Date;
     }
 
-    public void setShow_Date(GregorianCalendar show_Date) {
+    public void setShow_Date(String show_Date) {
         Show_Date = show_Date;
     }
 

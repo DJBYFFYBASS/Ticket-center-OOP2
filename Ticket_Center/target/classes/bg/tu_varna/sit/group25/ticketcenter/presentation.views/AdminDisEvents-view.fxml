@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="756.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.AdminDisEventsController">
+<AnchorPane prefHeight="756.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.AdminDisEventsController">
     <children>
-        <ListView fx:id="lvAdminDis" layoutX="14.0" layoutY="14.0" prefHeight="292.0" prefWidth="898.0" />
+        <ListView fx:id="lvAdminDis" layoutX="14.0" layoutY="14.0" prefHeight="292.0" prefWidth="586.0" />
         <TextField fx:id="tbDisName" layoutX="14.0" layoutY="353.0" />
         <TextField fx:id="tbDisPN" layoutX="14.0" layoutY="418.0" />
         <TextField fx:id="tbDisFee" layoutX="14.0" layoutY="490.0" />
@@ -19,13 +19,15 @@
         <Button fx:id="btAdd" layoutX="424.0" layoutY="341.0" mnemonicParsing="false" text="Add" />
         <Button fx:id="btUpdate" layoutX="417.0" layoutY="380.0" mnemonicParsing="false" text="Update" />
         <Button fx:id="btDel" layoutX="419.0" layoutY="418.0" mnemonicParsing="false" text="Delete" />
-        <Button fx:id="btFind" layoutX="541.0" layoutY="341.0" mnemonicParsing="false" text="Find" />
+        <Button fx:id="btFind" layoutX="416.0" layoutY="515.0" mnemonicParsing="false" text="Find" />
       <TextField fx:id="tbRateing" layoutX="14.0" layoutY="559.0" />
       <TextField fx:id="tbRCount" layoutX="14.0" layoutY="616.0" />
       <TextField fx:id="tbSTickets" layoutX="217.0" layoutY="559.0" />
       <Label layoutX="19.0" layoutY="535.0" text="Rateing" />
       <Label layoutX="19.0" layoutY="592.0" text="Rating count" />
       <Label layoutX="217.0" layoutY="535.0" text="Sold tickets" />
-        <Button fx:id="btBack" layoutX="521.0" layoutY="406.0" mnemonicParsing="false" text="Back" />
+        <Button fx:id="btBack" layoutX="415.0" layoutY="564.0" mnemonicParsing="false" text="Back" />
+      <TextField fx:id="tbDisID" layoutX="217.0" layoutY="490.0" prefHeight="25.0" prefWidth="41.0" />
+      <Label layoutX="217.0" layoutY="466.0" text="ID" />
     </children>
 </AnchorPane>
