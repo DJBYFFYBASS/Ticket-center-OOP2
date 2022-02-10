@@ -1,6 +1,9 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.common.Transition;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Admin;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.AdminRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.*;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.DistributorService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.OrganizerService;
@@ -17,9 +20,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.io.IOException;
+import java.util.List;
 
-
-//commented the 5th line //import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer; remove the "//" when fixed
 public class SceneUtls {
     @FXML
     private static TextField tfUserDis;
@@ -29,6 +31,7 @@ public class SceneUtls {
     Transaction transaction = session8.beginTransaction();
     public static DistributorService service = new DistributorService();
     public static OrganizerService service1 = new OrganizerService();
+    private static AdminRepository repository=AdminRepository.getInstance();
     private static boolean log = true;
 
     public static void EventQueryEntry(ActionEvent event,String fxmlFile,String title,String eventName)
@@ -99,17 +102,18 @@ public class SceneUtls {
     public static void AdminLogin(ActionEvent event, String fxmlFile, String title, String username, String pass)
     {//add DB distributor user and pass check
 
-        /*OrganizerListViewModel organizerListViewModel = new OrganizerListViewModel();
-        ObservableList<OrganizerListViewModel> organizer = service1.getAllOrganizers();
-        for (OrganizerListViewModel o : organizer) {
-            if (o.equals(organizer)) {
-
-                log = true;
-            }
+        List<Admin> adminList=repository.getLogin(username,pass);
+        Admin admin=new Admin();
+        try{
+            admin=adminList.get(0);
+            log=true;
+        }catch (Exception e)
+        {
+            log=false;
         }
-        *
-         */
-        if (log == true) {
+
+        if (log) {
+            Transition.AdminInfo.setID(admin.getAdmin_ID());
             Parent root1 = null;
             try {
                 FXMLLoader loader = new FXMLLoader(SceneUtls.class.getResource(fxmlFile));
@@ -122,6 +126,9 @@ public class SceneUtls {
             stage.setTitle(title);
             stage.setScene((new Scene(root1, 600, 400)));
             stage.show();
+        }
+        else {
+
         }
     }
 

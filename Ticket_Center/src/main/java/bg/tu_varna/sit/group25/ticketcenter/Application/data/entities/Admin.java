@@ -23,6 +23,15 @@ public class Admin implements Serializable {
     @Column(name = "Password", table = "admin")
     private String Admin_Pass;
 
+    public Long getAdmin_ID(){ return Admin_ID;}
+    public void setAdmin_ID(long ID){Admin_ID=ID;}
+
+    public String getAdmin_Name(){return Admin_Name;}
+    public void setAdmin_Name(String name){Admin_Name=name;}
+
+    public String getAdmin_Pass(){return Admin_Pass;}
+    public void setAdmin_Pass(String pass){Admin_Pass=pass;}
+
     @Override
     public String toString() {
         return "Admin{" +

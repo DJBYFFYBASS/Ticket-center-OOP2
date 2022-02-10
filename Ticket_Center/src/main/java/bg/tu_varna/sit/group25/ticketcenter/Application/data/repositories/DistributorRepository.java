@@ -82,6 +82,7 @@ public class DistributorRepository implements DAORepository<Distributor>
         return Optional.empty();
     }
 
+
     @Override
     public List<Distributor> getAll() {
 
@@ -103,6 +104,30 @@ public class DistributorRepository implements DAORepository<Distributor>
             return distributors;
     }
 
+    @Override
+    public List<Distributor> getLogin(String User,String Pass) {
+        Session session=Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Distributor> distributors=new LinkedList<>();
+        try {
+            String jpql = "SELECT t FROM Distributor.Password_D t  ";
+            distributors.addAll(session.createQuery(jpql, Distributor.class).getResultList());
+            log.info("get all customers");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get Customer error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return distributors;
+    }
+
+    @Override
+    public List<Distributor> getUser() {
+        return null;
+    }
 
 
 }

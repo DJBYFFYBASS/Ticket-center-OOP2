@@ -10,4 +10,6 @@ public interface DAORepository <T>
     void delete(T obj);
     Optional<T> getById(int id);
     List<T>getAll();
+    List<T> getLogin(String User,String Pass);
+    List<T>getUser();
 }

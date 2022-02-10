@@ -108,4 +108,14 @@ public class ShowRepository implements DAORepository<Show>
         }
         return shows;
     }
+
+    @Override
+    public List<Show> getLogin(String User,String Pass) {
+        return null;
+    }
+
+    @Override
+    public List<Show> getUser() {
+        return null;
+    }
 }

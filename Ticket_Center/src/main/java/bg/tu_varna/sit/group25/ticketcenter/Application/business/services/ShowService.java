@@ -1,5 +1,6 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.business.services;
 
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.ShowRepository;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;

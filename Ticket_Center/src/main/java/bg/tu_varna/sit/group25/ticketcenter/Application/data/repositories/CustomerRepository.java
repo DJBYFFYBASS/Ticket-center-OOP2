@@ -104,4 +104,14 @@ public class CustomerRepository implements DAORepository<Customer>{
         }
         return customers;
     }
+
+    @Override
+    public List<Customer> getLogin(String User,String Pass) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> getUser() {
+        return null;
+    }
 }

@@ -98,6 +98,15 @@ public class OrganizerRepository implements DAORepository<Organizer>
         return organizers;
     }
 
+    @Override
+    public List<Organizer> getLogin(String User,String Pass) {
+        return null;
+    }
+
+    @Override
+    public List<Organizer> getUser() {
+        return null;
+    }
 
 
 }

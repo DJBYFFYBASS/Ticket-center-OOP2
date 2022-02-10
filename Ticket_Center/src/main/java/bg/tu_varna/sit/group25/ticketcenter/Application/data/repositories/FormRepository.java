@@ -124,4 +124,14 @@ public class FormRepository implements DAORepository<Form>
         }
         return forms;
     }
+
+    @Override
+    public List<Form> getLogin(String User,String Pass) {
+        return null;
+    }
+
+    @Override
+    public List<Form> getUser() {
+        return null;
+    }
 }
