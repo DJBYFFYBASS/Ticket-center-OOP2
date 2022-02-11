@@ -2,6 +2,8 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controller
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.DistributorListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.FormUtils;
@@ -31,6 +33,12 @@ public class DistributorQueryController implements Initializable {
     private Button btQuery;
 
     private String disName;
+
+    public Distributor dis;
+    public void SetDis(Distributor dis)
+    {
+        this.dis=dis;
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<FormListViewModel> showsDistributorListViewModel=service.getAllForms();
@@ -45,15 +53,9 @@ public class DistributorQueryController implements Initializable {
         btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                SceneUtls.chooseScene(event, Constants.Distributor.DIS_OPTIONS,"Distributor options");
+                SceneUtls.DisToss(event, Constants.Distributor.DIS_OPTIONS,"Distributor options",dis);
             }
         });
     }
 
-    public void SetUserInfo(String username)
-    {
-        lbDisQry.setText("Distributor: "+username);
-        disName=username;
-
-    }
 }

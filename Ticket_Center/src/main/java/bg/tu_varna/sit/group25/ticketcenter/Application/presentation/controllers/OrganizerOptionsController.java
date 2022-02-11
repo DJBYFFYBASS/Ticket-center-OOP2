@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,31 +16,24 @@ public class OrganizerOptionsController implements Initializable {
     @FXML
     private Button btView;
     @FXML
-    private Button btUpdate;
-    @FXML
     private Button btCreate;
     @FXML
     private Button btBack;
 
-    public String OrgName;
+    public Organizer org;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         btCreate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-            SceneUtls.chooseScene(event,Constants.EventForm.EVENT_FORM_VIEW,"Event Form");
-            }
-        });
-        btUpdate.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-
+            SceneUtls.OrgEvent(event,Constants.EventForm.EVENT_FORM_VIEW,"Event Form",org);
             }
         });
         btView.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-            SceneUtls.chooseScene(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event query");
+            SceneUtls.OrgEQuery(event,Constants.EventForm.EVENT_QUERY_VIEW,"Event query",org);
             }
         });
         btBack.setOnAction(new EventHandler<ActionEvent>() {
@@ -48,10 +42,11 @@ public class OrganizerOptionsController implements Initializable {
                 SceneUtls.chooseScene(event, Constants.Login.LOGIN_VIEW,"Login");
             }
         });
+    }
 
-    }
-    public void SetOrgName(String name)
+    public void SetOrg(Organizer org)
     {
-        OrgName=name;
+        this.org=org;
     }
+
 }

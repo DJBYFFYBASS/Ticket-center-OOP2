@@ -3,6 +3,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controller
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.FormListViewModel;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;
@@ -29,6 +30,11 @@ public class EventQueryController implements Initializable {
     private Button btBack;
 
 
+    public Organizer org;
+    public void SetOrg(Organizer org)
+    {
+        this.org=org;
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ObservableList<ShowListViewModel>showsListViewModels=service.getAllShows();
@@ -36,7 +42,7 @@ public class EventQueryController implements Initializable {
         btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                SceneUtls.chooseScene(event, Constants.Organizer.Org_Options,"Distributor options");
+                SceneUtls.OrgToss(event, Constants.Organizer.Org_Options,"Distributor options",org);
             }
         });
     }

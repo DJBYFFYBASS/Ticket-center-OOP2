@@ -6,7 +6,6 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.OrganizerOptionsController">
    <children>
       <Button fx:id="btCreate" layoutX="127.0" layoutY="188.0" mnemonicParsing="false" text="Create event" />
-      <Button fx:id="btUpdate" layoutX="245.0" layoutY="188.0" mnemonicParsing="false" text="Update event" />
       <Button fx:id="btView" layoutX="362.0" layoutY="188.0" mnemonicParsing="false" text="View events" />
       <Button fx:id="btBack" layoutX="257.0" layoutY="281.0" mnemonicParsing="false" text="Back" />
    </children>

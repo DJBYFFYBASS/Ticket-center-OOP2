@@ -53,7 +53,6 @@ public class AdminRepository implements DAORepository<Admin> {
         Session session=Connection.openSession();
         Transaction transaction= session.beginTransaction();
         List<Admin> admin=new LinkedList<>();
-        //Admin admin = new Admin();
         String name=User;
         String pass=Pass;
         try {
@@ -72,7 +71,12 @@ public class AdminRepository implements DAORepository<Admin> {
     }
 
     @Override
-    public List<Admin> getUser() {
+    public List<Admin> getInfo(String name) {
+        return null;
+    }
+
+    @Override
+    public List<Admin> infoById(String id) {
         return null;
     }
 

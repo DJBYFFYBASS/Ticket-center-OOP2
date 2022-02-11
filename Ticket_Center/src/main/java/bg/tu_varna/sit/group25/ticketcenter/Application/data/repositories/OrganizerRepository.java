@@ -1,6 +1,7 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Admin;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
@@ -100,11 +101,33 @@ public class OrganizerRepository implements DAORepository<Organizer>
 
     @Override
     public List<Organizer> getLogin(String User,String Pass) {
+        Session session=Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Organizer> organizers=new LinkedList<>();
+        String name=User;
+        String pass=Pass;
+        try {
+            String jpql = "SELECT t FROM Organizer t where UserName_O='"+name+"' and Password_O='"+pass+"'";
+            organizers.addAll(session.createQuery(jpql, Organizer.class).getResultList());
+            log.info("get all customers");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get Customer error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return organizers;
+    }
+
+    @Override
+    public List<Organizer> getInfo(String name) {
         return null;
     }
 
     @Override
-    public List<Organizer> getUser() {
+    public List<Organizer> infoById(String id) {
         return null;
     }
 

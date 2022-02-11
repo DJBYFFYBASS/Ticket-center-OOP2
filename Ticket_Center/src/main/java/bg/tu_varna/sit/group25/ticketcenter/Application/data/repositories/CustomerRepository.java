@@ -111,7 +111,12 @@ public class CustomerRepository implements DAORepository<Customer>{
     }
 
     @Override
-    public List<Customer> getUser() {
+    public List<Customer> getInfo(String name) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> infoById(String id) {
         return null;
     }
 }

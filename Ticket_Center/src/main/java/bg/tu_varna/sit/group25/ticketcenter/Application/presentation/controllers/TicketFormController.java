@@ -2,6 +2,8 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controller
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.FormUtils;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -40,6 +42,12 @@ public class TicketFormController implements Initializable {
     @FXML
     private Label lbWarning;
 
+
+    public Distributor dis;
+    public void SetDis(Distributor dis)
+    {
+        this.dis=dis;
+    }
     private String disName;
     @Override
 
@@ -50,7 +58,7 @@ public class TicketFormController implements Initializable {
                 if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != ""&&tfTicketPrice.getText()!="") {
                     FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText(),tfTicketPrice.getText());
 
-                    SceneUtls.DisRateing(event,Constants.RateingForm.RATING_FORM_VIEW,"Rateing Form",disName);
+                    SceneUtls.DisRateing(event,Constants.RateingForm.RATING_FORM_VIEW,"Rateing Form",disName,dis);
                 } else {
                     lbWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
                 }
@@ -60,7 +68,7 @@ public class TicketFormController implements Initializable {
         btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                SceneUtls.chooseScene(event,Constants.Distributor.DIS_OPTIONS,"Distributor options");
+                SceneUtls.DisToss(event,Constants.Distributor.DIS_OPTIONS,"Distributor options",dis);
             }
         });
     }

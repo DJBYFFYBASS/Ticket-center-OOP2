@@ -11,5 +11,6 @@ public interface DAORepository <T>
     Optional<T> getById(int id);
     List<T>getAll();
     List<T> getLogin(String User,String Pass);
-    List<T>getUser();
+    List<T> getInfo(String name);
+    List<T> infoById(String id);
 }

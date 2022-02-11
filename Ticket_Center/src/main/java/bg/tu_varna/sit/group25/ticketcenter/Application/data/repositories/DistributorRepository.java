@@ -2,6 +2,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories;
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Admin;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Customer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
 import org.apache.log4j.Logger;
@@ -109,8 +110,10 @@ public class DistributorRepository implements DAORepository<Distributor>
         Session session=Connection.openSession();
         Transaction transaction= session.beginTransaction();
         List<Distributor> distributors=new LinkedList<>();
+        String name=User;
+        String pass=Pass;
         try {
-            String jpql = "SELECT t FROM Distributor.Password_D t  ";
+            String jpql = "SELECT t FROM Distributor t where UserName_D='"+name+"' and Password_D='"+pass+"'";
             distributors.addAll(session.createQuery(jpql, Distributor.class).getResultList());
             log.info("get all customers");
         }
@@ -125,7 +128,28 @@ public class DistributorRepository implements DAORepository<Distributor>
     }
 
     @Override
-    public List<Distributor> getUser() {
+    public List<Distributor> getInfo(String Name) {
+        Session session=Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Distributor> distributors=new LinkedList<>();
+        String name=Name;
+        try {
+            String jpql = "SELECT t FROM Distributor t where Name_D='"+name+"'";
+            distributors.addAll(session.createQuery(jpql, Distributor.class).getResultList());
+            log.info("get all customers");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get Customer error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return distributors;
+    }
+
+    @Override
+    public List<Distributor> infoById(String id) {
         return null;
     }
 

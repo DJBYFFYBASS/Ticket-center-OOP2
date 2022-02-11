@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="472.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.EventFormController">
+<AnchorPane prefHeight="472.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers.EventFormController">
    <children>
       <Label layoutX="52.0" layoutY="43.0" text="Location">
          <font>
@@ -85,6 +85,6 @@
          </font>
       </Label>
       <TextField fx:id="tfDis" layoutX="147.0" layoutY="291.0" />
-      <ListView layoutX="366.0" layoutY="13.0" prefHeight="378.0" prefWidth="347.0" />
+      <ListView fx:id="lvEF" layoutX="366.0" layoutY="13.0" prefHeight="378.0" prefWidth="423.0" />
    </children>
 </AnchorPane>

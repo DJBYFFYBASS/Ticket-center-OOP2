@@ -1,16 +1,24 @@
 package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controllers;
 
-//import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.FormService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.services.ShowService;
+import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.OrgEventWF;
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 // bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories.FormRepository;
         import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.FormUtils;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
-        import javafx.event.ActionEvent;
+import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.ShowListViewModel;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
         import java.net.URL;
@@ -19,7 +27,7 @@ import java.util.*;
 
 public class EventFormController implements Initializable {
 
-    //private final ShowService service=ShowService.getInstance();
+    private final ShowService service=ShowService.getInstance();
 
     @FXML
     private TextField tfEventLocation;
@@ -37,8 +45,6 @@ public class EventFormController implements Initializable {
     private TextField tfEventTicketLimit;
     @FXML
     private TextField tfEventID;
-    //organizer
-    //distributor
     @FXML
     private TextField tfDis;
     @FXML
@@ -51,17 +57,29 @@ public class EventFormController implements Initializable {
     private Button btBack;
     @FXML
     private Button buttonLoginReturn;
+    @FXML
+    private ListView lvEF;
+
+    public String name;
+
+    public Organizer org;
+    public void SetOrg(Organizer org)
+    {
+        this.org=org;
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        buttonCreate.setOnAction(new EventHandler<ActionEvent>() {
 
+        ObservableList<ShowListViewModel> showsListViewModels=service.getAllShows();
+        lvEF.setItems(showsListViewModels);
+        buttonCreate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 if (tfEventLocation.getText()!=""&&tfEventType.getText()!=""&&tfEventType.getText()!=""&&tfEventStatus.getText()!=""&&tfEventDate.getText()!=""
                         &&tfEventTickets.getText()!=""&&tfEventTicketLimit.getText()!=""&&tfDis.getText()!="")
                 {
-                    FormUtils.EventFormCreate(tfEventLocation.getText(),tfEventType.getText(),tfEventName.getText(), tfEventStatus.getText(),
-                            tfEventDate.getText(), tfEventTickets.getText(), tfEventTicketLimit.getText(),tfDis.getText());
+                    OrgEventWF.Add(tfEventName.getText(),tfEventDate.getText(),tfEventLocation.getText(),tfEventTicketLimit.getText(),tfEventTickets.getText(),
+                            tfEventStatus.getText(),tfEventType.getText(),org,tfDis.getText());
                 }
                 else
                 {
@@ -89,7 +107,7 @@ public class EventFormController implements Initializable {
         btBack.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                SceneUtls.chooseScene(event,Constants.Organizer.Org_Options,"Organizer Options");
+                SceneUtls.OrgToss(event,Constants.Organizer.Org_Options,"Organizer Options",org);
             }
         });
         buttonLoginReturn.setOnAction(new EventHandler<ActionEvent>() {
@@ -99,5 +117,6 @@ public class EventFormController implements Initializable {
             }
         });
     }
+
 
 }

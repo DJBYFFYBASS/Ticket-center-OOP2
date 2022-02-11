@@ -2,6 +2,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.presentation.controller
 
 import bg.tu_varna.sit.group25.ticketcenter.Application.common.Constants;
 import bg.tu_varna.sit.group25.ticketcenter.Application.business.workflow.FormUtils;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Distributor;
 import bg.tu_varna.sit.group25.ticketcenter.Application.presentation.models.SceneUtls;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,6 +22,11 @@ public class DistributorRateingController implements Initializable {
     @FXML
     private Button btSkip;
     private String disName;
+    public Distributor dis;
+    public void SetDis(Distributor dis)
+    {
+        this.dis=dis;
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         buttonSubmmitRating.setOnAction(new EventHandler<ActionEvent>() {
@@ -29,13 +35,13 @@ public class DistributorRateingController implements Initializable {
                 if (tfRateing.getText()!="") {
                     FormUtils.DisRateing(tfRateing.getText(),disName);
                 }
-                SceneUtls.chooseScene(event, Constants.Login.LOGIN_VIEW,"Login");
+                SceneUtls.DisToss(event, Constants.Distributor.DIS_OPTIONS,"Distributor options",dis);
             }
         });
         btSkip.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                SceneUtls.chooseScene(event,Constants.Distributor.DIS_OPTIONS,"Distributor options");
+                SceneUtls.DisToss(event, Constants.Distributor.DIS_OPTIONS,"Distributor options",dis);
             }
         });
     }

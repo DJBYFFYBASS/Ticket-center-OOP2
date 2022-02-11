@@ -131,7 +131,12 @@ public class FormRepository implements DAORepository<Form>
     }
 
     @Override
-    public List<Form> getUser() {
+    public List<Form> getInfo(String name) {
+        return null;
+    }
+
+    @Override
+    public List<Form> infoById(String id) {
         return null;
     }
 }

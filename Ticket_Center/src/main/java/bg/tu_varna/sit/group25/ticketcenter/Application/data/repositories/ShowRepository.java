@@ -3,6 +3,7 @@ package bg.tu_varna.sit.group25.ticketcenter.Application.data.repositories;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.access.Connection;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Organizer;
 import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show;
+import bg.tu_varna.sit.group25.ticketcenter.Application.data.entities.Show_Status;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -115,7 +116,28 @@ public class ShowRepository implements DAORepository<Show>
     }
 
     @Override
-    public List<Show> getUser() {
+    public List<Show> getInfo(String Name) {
+        Session session= Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Show> list=new LinkedList<>();
+        String name=Name;
+        try {
+            String jpql = "SELECT t FROM Show t where Show_ID='"+name+"'";
+            list.addAll(session.createQuery(jpql, Show.class).getResultList());
+            log.info("get all customers");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get Customer error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return list;
+    }
+
+    @Override
+    public List<Show> infoById(String id) {
         return null;
     }
 }
