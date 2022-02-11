@@ -122,7 +122,26 @@ public class ShowRepository implements DAORepository<Show>
         List<Show> list=new LinkedList<>();
         String name=Name;
         try {
-            String jpql = "SELECT t FROM Show t where Show_ID='"+name+"'";
+            String jpql = "SELECT t FROM Show t where organizer ='"+name+"'";
+            list.addAll(session.createQuery(jpql, Show.class).getResultList());
+            log.info("get all customers");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get Customer error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return list;
+    }
+    public List<Show> getInfo(int Name) {
+        Session session= Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Show> list=new LinkedList<>();
+        int name=Name;
+        try {
+            String jpql = "SELECT t FROM Show t where organizer ='"+name+"'";
             list.addAll(session.createQuery(jpql, Show.class).getResultList());
             log.info("get all customers");
         }
@@ -138,6 +157,22 @@ public class ShowRepository implements DAORepository<Show>
 
     @Override
     public List<Show> infoById(String id) {
-        return null;
+        Session session= Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Show> list=new LinkedList<>();
+        String name=id;
+        try {
+            String jpql = "SELECT t FROM Show t where Show_ID='"+name+"'";
+            list.addAll(session.createQuery(jpql, Show.class).getResultList());
+            log.info("get all customers");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get Customer error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return list;
     }
 }

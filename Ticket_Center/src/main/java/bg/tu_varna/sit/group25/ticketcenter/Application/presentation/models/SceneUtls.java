@@ -277,24 +277,6 @@ public class SceneUtls {
             stage.setScene((new Scene(root, 600, 400)));
             stage.show();
         }
-    public static void DisQueryEntry(ActionEvent event,String fxmlFile,String title, String disName)
-    {
-        Parent root = null;
-        if (disName != null ) {
-            try {
-                FXMLLoader loader = new FXMLLoader(SceneUtls.class.getResource(fxmlFile));
-                DistributorQueryController distributorQueryController=loader.getController();
-                //distributorQueryController.SetUserInfo(disName);
-                root = loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setTitle(title);
-            stage.setScene((new Scene(root, 600, 400)));
-            stage.show();
-        }
-    }
 }
 
 

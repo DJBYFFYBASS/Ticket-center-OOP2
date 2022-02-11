@@ -28,8 +28,6 @@ public class TicketFormController implements Initializable {
     @FXML
     private TextField tfClientName;
     @FXML
-    private TextField tfClientPhonenumber;
-    @FXML
     private TextField tfEvent;
     @FXML
     private TextField tfTicketCount;
@@ -55,8 +53,8 @@ public class TicketFormController implements Initializable {
         buttonSubmit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (tfClientName.getText() != "" && tfClientPhonenumber.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != ""&&tfTicketPrice.getText()!="") {
-                    FormUtils.TicketForm(tfClientName.getText(),tfClientPhonenumber.getText(),tfEvent.getText(),tfTicketCount.getText(),tfTicketPrice.getText());
+                if (tfClientName.getText() != "" && tfTicketCount.getText() != "" && tfEvent.getText() != ""&&tfTicketPrice.getText()!="") {
+                    //FormUtils.TicketForm(tfClientName.getText(),tfEvent.getText(),tfTicketCount.getText(),tfTicketPrice.getText());
 
                     SceneUtls.DisRateing(event,Constants.RateingForm.RATING_FORM_VIEW,"Rateing Form",disName,dis);
                 } else {

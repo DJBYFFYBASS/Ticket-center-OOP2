@@ -46,9 +46,8 @@ public class ShowListViewModel
         this.distributor = distributor.getName_D();
     }
 
-
     public String toString()
     {
-        return String.format(" %d | %s | %s | %s | %d | %s | %s | %s | %s | %s ", this.show_id,title,date,location,max,title,status,s_type,organizer,distributor);
+        return String.format(" %d | %s | %s | %s | %d | %s | %s | %s | %s ", this.show_id,title,date,location,max,status,s_type,organizer,distributor);
     }
 }

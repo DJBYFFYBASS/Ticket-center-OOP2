@@ -93,11 +93,11 @@ public class DistributorRepository implements DAORepository<Distributor>
             try {
                 String jpql = "SELECT t FROM Distributor t";
                 distributors.addAll(session.createQuery(jpql, Distributor.class).getResultList());
-                log.info("get all customers");
+                log.info("get all distributors");
             }
             catch (Exception ex)
             {
-                log.error("Get Customer error: "+ex.getMessage());
+                log.error("Get distributors error: "+ex.getMessage());
             }
             finally {
                 transaction.commit();
@@ -115,11 +115,11 @@ public class DistributorRepository implements DAORepository<Distributor>
         try {
             String jpql = "SELECT t FROM Distributor t where UserName_D='"+name+"' and Password_D='"+pass+"'";
             distributors.addAll(session.createQuery(jpql, Distributor.class).getResultList());
-            log.info("get all customers");
+            log.info("get all distributors");
         }
         catch (Exception ex)
         {
-            log.error("Get Customer error: "+ex.getMessage());
+            log.error("Get distributors error: "+ex.getMessage());
         }
         finally {
             transaction.commit();
@@ -136,11 +136,11 @@ public class DistributorRepository implements DAORepository<Distributor>
         try {
             String jpql = "SELECT t FROM Distributor t where Name_D='"+name+"'";
             distributors.addAll(session.createQuery(jpql, Distributor.class).getResultList());
-            log.info("get all customers");
+            log.info("get all distributors");
         }
         catch (Exception ex)
         {
-            log.error("Get Customer error: "+ex.getMessage());
+            log.error("Get distributors error: "+ex.getMessage());
         }
         finally {
             transaction.commit();
@@ -150,7 +150,23 @@ public class DistributorRepository implements DAORepository<Distributor>
 
     @Override
     public List<Distributor> infoById(String id) {
-        return null;
+        Session session=Connection.openSession();
+        Transaction transaction= session.beginTransaction();
+        List<Distributor> distributors=new LinkedList<>();
+        String name=id;
+        try {
+            String jpql = "SELECT t FROM Distributor t where Distributor_ID='"+name+"'";
+            distributors.addAll(session.createQuery(jpql, Distributor.class).getResultList());
+            log.info("get all distributors");
+        }
+        catch (Exception ex)
+        {
+            log.error("Get distributors error: "+ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+        }
+        return distributors;
     }
 
 

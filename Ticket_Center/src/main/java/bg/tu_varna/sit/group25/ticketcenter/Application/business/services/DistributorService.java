@@ -50,7 +50,5 @@ public class DistributorService {
                 (int) d.getRating_Count(),
                 d.getUserName_D(),
                 d.getPassword_D())).collect(Collectors.toList()));
-
-
     }
 }

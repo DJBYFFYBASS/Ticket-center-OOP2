@@ -67,9 +67,13 @@ public class EventFormController implements Initializable {
     {
         this.org=org;
     }
+    private void loadList()
+    {
+
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+       //ObservableList<ShowListViewModel> showsListViewModels=service.getForOrg(org.getOrganizer_ID());
         ObservableList<ShowListViewModel> showsListViewModels=service.getAllShows();
         lvEF.setItems(showsListViewModels);
         buttonCreate.setOnAction(new EventHandler<ActionEvent>() {
@@ -85,23 +89,25 @@ public class EventFormController implements Initializable {
                 {
                     lbEventFormWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
                 }
-
+                ObservableList<ShowListViewModel> showsListViewModels=service.getAllShows();
+                lvEF.setItems(showsListViewModels);
             }
         });
 
         buttonUpdate.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (tfEventLocation.getText()!=""&&tfEventType.getText()!=""&&tfEventName.getText()!=""&&tfEventStatus.getText()!=""&&tfEventDate.getText()!=""
-                        &&tfEventTickets.getText()!=""&&tfEventTicketLimit.getText()!=""&&tfEventID.getText()!="")
+                if (tfEventID.getText()!="")
                 {
-                    FormUtils.EventFormUpdate(tfEventLocation.getText(),tfEventType.getText(),tfEventName.getText(),tfEventStatus.getText(),tfEventDate.getText(),
-                            tfEventTickets.getText(), tfEventTicketLimit.getText(),tfEventID.getText());
+                    OrgEventWF.Update(tfEventName.getText(),tfEventDate.getText(),tfEventLocation.getText(),tfEventTicketLimit.getText(),tfEventTickets.getText(),
+                            tfEventStatus.getText(),tfEventType.getText(),org,tfDis.getText(),tfEventID.getText());
                 }
                 else
                 {
                     lbEventFormWarning.setText(Constants.Warning.EMPTY_FIELDS_MESSAGE);
                 }
+                ObservableList<ShowListViewModel> showsListViewModels=service.getAllShows();
+                lvEF.setItems(showsListViewModels);
             }
         });
         btBack.setOnAction(new EventHandler<ActionEvent>() {
